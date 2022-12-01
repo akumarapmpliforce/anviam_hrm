@@ -8,7 +8,6 @@ import { MaterialModule } from './modules/material.module';
 import { FilterPipe } from './pipe/filter.pipe';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { InterceptorInterceptor } from './services/interceptor.interceptor';
-import { HeaderComponent } from './page-layout/header/header.component';
 
 @NgModule({
   declarations: [AppComponent, FilterPipe,],
