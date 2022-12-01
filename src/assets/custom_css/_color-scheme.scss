@@ -1,0 +1,68 @@
+:root {
+  /*Primary Color*/
+
+  --primary: #7782f1;
+  --primary_shade_light_1: #e4e4ff;
+
+  /*Secondary Color*/
+
+  --secondary: #4efdea;
+  --secondary_shade: #d7fffb;
+
+  /*Ascent Color*/
+
+  --ascent: #006bf1;
+  --ascent_2_shade: #eff6fe;
+
+  /*Status Color*/
+
+  --status-info: #219fff;
+  --status-info_shade: #e9f6ff;
+  --status-success: #17bd8d;
+  --status-success_shade: #e9fbf6;
+  --status-warning: #ff6b00;
+  --status-warning_shade: #fff7eb;
+  --status-danger: #f53d6b;
+  --status-danger_shade: #ffedec;
+
+  /*Dark Color*/
+
+  --dark-dark_1: #000034;
+  --dark-dark_2: #4b4e68;
+  --dark-dark_3: #84849a;
+  --dark-dark_4: #979ab8;
+  --dark-dark_5: #d6d8ea;
+  --dark-dark_6: #ebecf3;
+  --dark-dark_7: #eff0f5;
+  --dark-dark_8: #c0c2e2;
+  --dark-dark_9: #d6d8ee;
+
+  /*Gradient Colors Background*/
+
+  --bg-color: #050824;
+  --brand-g: linear-gradient(90deg, #4efdea 6.67%, #5766ff 92.08%);
+  --gradient-1: linear-gradient(90deg, #0000ff 0%, #7f00ff 100%);
+  --gradient-2: linear-gradient(90deg, #0067e4 0%, #fc6de4 100%);
+}
+
+/*Effect Styles*/
+
+.hover-shadow {
+  background: #c4c4c4 !important;
+  box-shadow: 0px 4px 0px rgba(22, 8, 49, 0.03) !important;
+}
+
+.selected-shadow {
+  background: #c4c4c4 !important;
+  box-shadow: 0px 4px 0px #632cc7 !important;
+}
+
+.shadow {
+  background: #c4c4c4 !important;
+  box-shadow: 0px 15px 40px rgba(22, 8, 49, 0.1) !important;
+}
+
+.table-shadow {
+  background: #c4c4c4 !important;
+  box-shadow: 0px 1px 0px rgba(213, 208, 223, 0.4) !important;
+}

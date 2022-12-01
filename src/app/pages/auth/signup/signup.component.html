@@ -1,0 +1,90 @@
+<div class="card text-black">
+  <div class="card-body">
+    <div class="row justify-content-center">
+      <div class="col-md-10 col-lg-6 col-xl-6 order-2 order-lg-1">
+        <p class="text-center h1 fw-bold mx-1 mx-md-4 mt-4">Sign up</p>
+        <!-- Form  -->
+        <form [formGroup]="SignUpForm" (ngSubmit)="onSubmit()" class="mx-1 mx-md-4">
+          <!-- name  -->
+          <div class="d-flex flex-row align-items-center mb-4">
+            <div class="form-outline flex-fill mb-0">
+              <input type="text" class="form-control" placeholder="First Name" formControlName="firstname" />
+              <span class="text-danger error_text ms-1 "
+                *ngIf="submitted && SignUpForm.get('firstname')?.errors?.['required']">Enter First Name</span>
+              <span class="text-danger error_text ms-1"
+                *ngIf="SignUpForm.get('firstname')?.errors?.['whitespace']">Remove Whitespace!</span>
+            </div>
+
+          </div>
+
+          <div class="d-flex flex-row align-items-center mb-4">
+            <div class="form-outline flex-fill mb-0">
+              <input type="text" class="form-control" placeholder="Last Name" formControlName="lastname" />
+              <span class="text-danger error_text ms-1"
+                *ngIf="submitted && SignUpForm.get('lastname')?.errors?.['required']">Enter Last Name</span>
+              <span class="text-danger error_text ms-1"
+                *ngIf="SignUpForm.get('lastname')?.errors?.['whitespace']">Remove Whitespace!</span>
+            </div>
+          </div>
+
+          <!-- email  -->
+          <div class="d-flex flex-row align-items-center mb-4">
+            <div class="form-outline flex-fill mb-0">
+              <input type="email" id="form3Example3c" class="form-control" placeholder="Email Address"
+                formControlName="email" />
+              <span class="text-danger error_text ms-1"
+                *ngIf="submitted && SignUpForm.get('email')?.errors?.['required']">Enter
+                Email Address</span>
+              <span class="text-danger error_text ms-1"
+                *ngIf="submitted && SignUpForm.get('email')?.errors?.['pattern'] ">Enter
+                Valid Email Address</span>
+              <span class="text-danger error_text ms-1" *ngIf="SignUpForm.get('email')?.errors?.['whitespace']">Remove
+                Whitespace!</span>
+            </div>
+          </div>
+
+          <!-- password  -->
+          <div class="d-flex flex-row align-items-center mb-4">
+            <div class="form-outline flex-fill mb-0">
+              <input type="password" id="form3Example4c" class="form-control" placeholder="Password"
+                formControlName="password" />
+              <span class="text-danger error_text ms-1"
+                *ngIf="submitted && SignUpForm.get('password')?.errors?.['required']">Enter Password</span>
+              <span class="text-danger error_text ms-1"
+                *ngIf="submitted && SignUpForm.get('password')?.errors?.['minlength']">Minimum 6 Character Password
+                required
+              </span>
+              <span class="text-danger error_text ms-1"
+                *ngIf="SignUpForm.get('password')?.errors?.['whitespace']">Remove Whitespace!</span>
+            </div>
+          </div>
+
+          <!-- confirm password  -->
+          <div class="d-flex flex-row align-items-center mb-4">
+            <div class="form-outline flex-fill mb-0">
+              <input type="password" id="form3Example4cd" class="form-control" placeholder="Confirm Password"
+                formControlName="confirm_password" />
+              <span class="text-danger error_text ms-1"
+                *ngIf="SignUpForm.get('confirm_password')?.errors?.['whitespace']">Remove Whitespace!</span>
+              <span class="text-danger error_text ms-1"
+                *ngIf="submitted && SignUpForm.get('confirm_password')?.errors?.['required']">Please confirm your
+                password!</span>
+              <span class="text-danger error_text ms-1"
+                *ngIf="submitted && SignUpForm.get('confirm_password')?.errors?.['confirmedValidator']">Password not
+                same!</span>
+            </div>
+          </div>
+
+          <!-- buttons  -->
+          <div class="d-flex justify-content-center mb-3 mb-lg-4">
+            <button type="submit" class="btn btn_sign btn-lg">Sign Up</button>
+          </div>
+          <div class="d-flex align-items-center justify-content-center pb-4">
+            <p class="mb-0 me-2">Already have an account</p>
+            <button type="button" class="btn btn-outline-danger" routerLink="login">Login</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
