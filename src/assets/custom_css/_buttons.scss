@@ -1,0 +1,63 @@
+// Font Styling in Buttons
+@import "./color-scheme";
+
+@mixin button-size(
+  $font-size,
+  $line-height,
+  $p-top,
+  $p-right,
+  $p-bottom,
+  $p-left
+) {
+  font-style: normal !important;
+  font-weight: 600 !important;
+  color: var(--dark-dark_1) !important;
+  font-size: $font-size !important;
+  line-height: $line-height !important;
+  padding-top: $p-top !important;
+  padding-right: $p-right !important;
+  padding-bottom: $p-bottom !important;
+  padding-left: $p-left !important;
+  border-radius: 16px;
+}
+@mixin input($font-size, $line-height) {
+  font-style: normal;
+  font-weight: 500;
+  color: var(--dark-dark_1);
+  font-size: $font-size;
+  line-height: $line-height;
+}
+.btn-lg {
+  @include button-size(16px, 24px, 18px, 40px, 18px, 40px);
+}
+.btn-md {
+  @include button-size(14px, 21px, 11px, 30px, 11px, 30px);
+}
+.btn-sm {
+  @include button-size(12px, 20px, 9px, 20px, 9px, 20px);
+}
+.tag-md {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 20px;
+  color: var(--dark-dark_1 !important);
+}
+.input-lg {
+  @include input(14px, 21px);
+}
+.input-md {
+  @include input(14px, 21px);
+}
+.input-sm {
+  @include input(13px, 20px);
+}
+
+.btn-primary {
+  background: var(--brand-g) !important;
+  border: none;
+}
+.btn-secondary {
+  background: var(--secondary_shade) !important;
+  border: none;
+}
