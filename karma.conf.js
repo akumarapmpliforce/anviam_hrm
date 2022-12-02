@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/frontend_rebillon'),
+      dir: require('path').join(__dirname, './coverage/anviam_hrm'),
       subdir: '.',
       reporters: [
         { type: 'html' },
