@@ -1,0 +1,25 @@
+.backgroundColor{
+    background-color: #004767;
+    a{
+        color: white;
+        text-decoration: none;
+    }
+}
+
+.designDiv img{
+    width: 100% !important;
+    position: absolute;
+    object-fit: cover;
+    height: 30rem;
+}
+
+.designDiv video{
+    width: 100% !important;
+    // object-fit: cover;
+    height: 30rem;
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+}
