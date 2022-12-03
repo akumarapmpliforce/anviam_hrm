@@ -57,8 +57,6 @@ export class SignupComponent implements OnInit {
   }
   onSubmit() {
     this.submitted = true;
-  }
-  navigateToLogin(){
-    this.router.navigate(['auth/login'])
+    console.log(this.SignUpForm.value)
   }
 }

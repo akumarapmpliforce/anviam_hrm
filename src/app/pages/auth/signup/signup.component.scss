@@ -1,4 +1,8 @@
 .error_text {
   font-size: 13px;
-
+}
+.gradient {
+  background: #283048;
+  background: -webkit-linear-gradient(to left, #859398, #283048);
+  background: linear-gradient(to left, #859398, #283048);
 }

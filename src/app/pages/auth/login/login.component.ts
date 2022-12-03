@@ -42,7 +42,5 @@ export class LoginComponent implements OnInit {
   onSubmit() {
     this.submitted = true;
   }
-  navigateToSIgnup() {
-    this.router.navigate(['auth/signup']);
-  }
+  
 }
