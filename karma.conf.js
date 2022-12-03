@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/anviam_hrm'),
+      dir: require('path').join(__dirname, './coverage/hrm_forntend'),
       subdir: '.',
       reporters: [
         { type: 'html' },
