@@ -5,7 +5,7 @@
 const url = '';
 export const environment = {
   baseUrl: url + 'api',
-  production: false,
+  production: true,
 };
 
 /*
