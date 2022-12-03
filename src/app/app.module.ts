@@ -9,6 +9,8 @@ import { MaterialModule } from './modules/material.module';
 import { AuthModule } from './pages/auth/auth.module';
 import { PipeModule } from './pipe/pipe.module';
 import { InterceptorInterceptor } from './services/interceptor.interceptor';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,12 @@ import { InterceptorInterceptor } from './services/interceptor.interceptor';
     MaterialModule,
     HttpClientModule,
     PipeModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      registrationStrategy: 'registerWhenStable:30000'
+      // Register the ServiceWorker as soon as the application is stable
+      // or after 30 seconds (whichever comes first).
+    }),
   ],
   providers: [ {
     provide: HTTP_INTERCEPTORS,
