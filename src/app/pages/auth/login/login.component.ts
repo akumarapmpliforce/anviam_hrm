@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { whitespaceValidator } from 'src/app/functions/functions';
 
 @Component({
@@ -10,7 +11,7 @@ import { whitespaceValidator } from 'src/app/functions/functions';
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
   submitted: boolean = false;
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private router: Router) {}
 
   ngOnInit(): void {
     this.initForm();
@@ -40,5 +41,8 @@ export class LoginComponent implements OnInit {
 
   onSubmit() {
     this.submitted = true;
+  }
+  navigateToSIgnup() {
+    this.router.navigate(['auth/signup']);
   }
 }

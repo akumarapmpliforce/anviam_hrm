@@ -5,8 +5,9 @@ import { RouterModule, Routes } from "@angular/router";
 import { FullCalendarModule } from '@fullcalendar/angular';
 import dayGridPlugin from '@fullcalendar/daygrid'; // a plugin!
 import interactionPlugin from '@fullcalendar/interaction'; // a plugin!
+import { PageLayoutModule } from "src/app/page-layout/page-layout.module";
 
-const routes: Routes = [{ path: "", component: HomeComponent }];
+const routes: Routes = [{ path: '', component: HomeComponent }];
 
 FullCalendarModule.registerPlugins([ // register FullCalendar plugins
   dayGridPlugin,
@@ -15,9 +16,7 @@ FullCalendarModule.registerPlugins([ // register FullCalendar plugins
 @NgModule({
   declarations: [HomeComponent],
   imports: [CommonModule, RouterModule.forChild(routes),
-    FullCalendarModule,
-  
+    FullCalendarModule,PageLayoutModule
   ],
 })
 export class HomeModule {}
-

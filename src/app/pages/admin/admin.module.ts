@@ -6,7 +6,7 @@ import { MaterialModule } from 'src/app/modules/material.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PageLayoutModule } from 'src/app/page-layout/page-layout.module';
 import { AdminComponent } from './admin.component';
-import { HeaderComponent } from 'src/app/page-layout/header/header.component';
+import { HeaderComponent } from 'src/app/page-layout/header-admin/header.component';
 
 const routes: Routes = [
   {
@@ -20,7 +20,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AdminComponent,HeaderComponent],
+  declarations: [AdminComponent],
   imports: [
     CommonModule,
     SharedModule,

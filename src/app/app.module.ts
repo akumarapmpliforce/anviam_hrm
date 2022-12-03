@@ -14,14 +14,13 @@ import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     AuthModule,
-    MaterialModule,
     HttpClientModule,
     PipeModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
