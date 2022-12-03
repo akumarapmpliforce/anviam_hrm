@@ -21,9 +21,8 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     HttpClientModule,
     PipeModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
-      enabled: !isDevMode(),
-      // Register the ServiceWorker as soon as the application is stable
-      registrationStrategy: 'registerWhenStable:20000'
+      enabled: isDevMode(),
+      registrationStrategy: 'registerWhenStable:30000'
     })
   ],
   providers: [

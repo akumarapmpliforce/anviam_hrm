@@ -22,13 +22,18 @@ const routes: Routes = [
   },
   {
     path: 'auth',
-    children: [
-      { path: 'login', component: LoginComponent },
-      { path: 'signup', component: SignupComponent },
-      { path: 'email-verification', component: EmailVerificationComponent },
-      { path: '**', component: LoginComponent },
-    ],
+    loadChildren: () =>
+      import('./pages/auth/auth.module').then((m) => m.AuthModule),
   },
+  // {
+  //   path: 'auth',
+  //   children: [
+  //     { path: 'login', component: LoginComponent },
+  //     { path: 'signup', component: SignupComponent },
+  //     { path: 'email-verification', component: EmailVerificationComponent },
+  //     { path: '**', component: LoginComponent },
+  //   ],
+  // },
 ];
 
 @NgModule({
