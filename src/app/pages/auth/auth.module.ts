@@ -9,15 +9,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from 'src/app/modules/material.module';
 
 const routes: Routes = [
-  // {
-  //   path: '',
-  //   pathMatch: 'full',
-  //   children: [
-  //     { path: 'login', component: LoginComponent },
-  //     { path: 'signup', component: SignupComponent },
-  //     { path: 'email-verification', component: EmailVerificationComponent },
-  //   ],
-  // },
+  {
+    path: '',
+    pathMatch: 'full',
+    children: [
+      { path: 'login', component: LoginComponent },
+      { path: 'signup', component: SignupComponent },
+      { path: 'email-verification', component: EmailVerificationComponent },
+    ],
+  },
   // { path: 'login', component: LoginComponent },
   // { path: 'signup', component: SignupComponent },
   // { path: 'email-verification', component: EmailVerificationComponent },
