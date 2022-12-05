@@ -6,6 +6,7 @@ import { FullCalendarModule } from '@fullcalendar/angular';
 import dayGridPlugin from '@fullcalendar/daygrid'; // a plugin!
 import interactionPlugin from '@fullcalendar/interaction'; // a plugin!
 import { PageLayoutModule } from "src/app/page-layout/page-layout.module";
+import { CarouselComponent } from './carousel/carousel.component';
 
 const routes: Routes = [{ path: '', component: HomeComponent }];
 
@@ -14,7 +15,7 @@ FullCalendarModule.registerPlugins([ // register FullCalendar plugins
   interactionPlugin
 ]);
 @NgModule({
-  declarations: [HomeComponent],
+  declarations: [HomeComponent, CarouselComponent],
   imports: [CommonModule, RouterModule.forChild(routes),
     FullCalendarModule,PageLayoutModule
   ],
