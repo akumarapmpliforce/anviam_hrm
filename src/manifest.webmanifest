@@ -1,6 +1,6 @@
 {
   "name": "anviam_hrm",
-  "short_name": "anviam_hrm",
+  "short_name": "Anviam HRM",
   "theme_color": "#1976d2",
   "background_color": "#fafafa",
   "display": "standalone",
@@ -8,7 +8,7 @@
   "start_url": "./",
   "icons": [
     {
-      "src": "assets/icons/favicon.ico",
+      "src": "assets/icons/favicon-16x16.png",
       "sizes": "72x72",
       "type": "image/png",
       "purpose": "maskable any"
@@ -44,7 +44,7 @@
       "purpose": "maskable any"
     },
     {
-      "src": "assets/icons/icon-384x384.png",
+      "src": "assets/icons/android-chrome-512x512.png",
       "sizes": "384x384",
       "type": "image/png",
       "purpose": "maskable any"

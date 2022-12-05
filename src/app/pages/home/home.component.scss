@@ -14,3 +14,6 @@
 .designDiv video {
   height: 30rem;
 }
+::ng-deep.fc-today-button{
+  text-transform: capitalize !important;
+}
