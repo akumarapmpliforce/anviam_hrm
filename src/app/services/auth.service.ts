@@ -9,10 +9,10 @@ import { apiUrl } from '../endpoints/api';
 export class AuthService {
   constructor(private http: HttpClient) {}
 
-  signup(object: object): Observable<any> {
-    return this.http.get(apiUrl.signUp);
+  signup(payload: object): Observable<any> {
+    return this.http.get(apiUrl.signUp, payload);
   }
-  signin(object: object): Observable<any> {
-    return this.http.get(apiUrl.signIn);
+  signin(): Observable<any> {
+    return this.http.get('./assets/json/users.json');
   }
 }

@@ -12,10 +12,12 @@ export class AdminComponent implements OnInit {
     var menu_btn = document.querySelector('#menu-btn')!;
     var sidebar = document.querySelector('#sidebar')!;
     var container = document.querySelector('.main')!;
+    var topbar = document.querySelector('.topbar')!;
     menu_btn.addEventListener('click', () => {
       sidebar.classList.toggle('active-nav');
-      container.classList.toggle('active-cont');
-      menu_btn.classList.toggle('menu-notActive')
+      container.classList.toggle('active-container');
+      topbar.classList.toggle('active-container');
+      // menu_btn.classList.toggle('menu-notActive')
     });
   }
 }

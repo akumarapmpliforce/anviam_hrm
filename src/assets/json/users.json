@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "first_name": "Nabullah",
+    "lastname": "Ansari",
+    "email": "nansari@anviam.com",
+    "profile_img": "",
+    "password": 123456789
+  },
+  {
+    "id": 2,
+    "first_name": "Shubham",
+    "lastname": "Dhiman",
+    "email": "shubham.dhiman@anviam.com",
+    "password": 123456789,
+    "profile_img": ""
+  },
+  {
+    "id": 3,
+    "first_name": "Shubham",
+    "lastname": "Dhiman",
+    "email": "carl@neighborz.io",
+    "password": 123456789,
+    "profile_img": ""
+  }
+]

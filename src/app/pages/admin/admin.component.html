@@ -1,7 +1,21 @@
 <div class="container-fluid px-0">
     <app-header></app-header>
-    <i class="bi bi-arrow-right-circle-fill position-absolute top-0 menu-active text-white bg-dark" id="menu-btn"></i>
     <div class="main p-4">
-        <router-outlet></router-outlet>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top main topbar">
+            <div class="container-fluid flex-nowrap">
+                <div class="py-2">
+                    <img src="./assets/logo/anviam_logo.png" alt="" class="img-fluid ms-2 logo">
+                    <a class="navbar-brand me-2 nav-icon menu-active px-2 py-1 ms-3 shadow-sm" id="menu-btn">
+                        <i class="bi bi-list text-dark"></i>
+                    </a>
+                </div>
+                <div class="text-end right-nav-items w-100">
+                    <button mat-stroked-button color="warn" class="" [routerLink]="['/auth/login']">Logout</button>
+                </div>
+            </div>
+        </nav>
+        <div class="mt-5">
+            <router-outlet></router-outlet>
+        </div>
     </div>
 </div>
