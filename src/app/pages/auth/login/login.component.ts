@@ -55,7 +55,7 @@ export class LoginComponent implements OnInit {
           console.log('Login Successfull');
           this.router.navigate(['/admin/dashboard']);
         } else {
-          console.log('Please check Cred');
+          console.log('Please check Creditantial');
         }
       });
     });
