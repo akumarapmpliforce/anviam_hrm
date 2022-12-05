@@ -42,4 +42,5 @@ jobs:
         with:
           args: deploy --only hosting
         env:
+          projectId: anviamhrm
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_ANVIAMHRM }}
