@@ -16,4 +16,8 @@ export class CommonService {
   getImageVideo(){
     return this.http.get('./assets/json/data.json')
   }
+
+  getEventDetails(){
+    return this.http.get('./assets/json/event.json')
+  }
 }
