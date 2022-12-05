@@ -6,7 +6,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "hrm_forntend": {
+    "anviam_hrm": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -82,10 +82,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "hrm_forntend:build:production"
+              "browserTarget": "anviam_hrm:build:production"
             },
             "development": {
-              "browserTarget": "hrm_forntend:build:development"
+              "browserTarget": "anviam_hrm:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -93,7 +93,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "hrm_forntend:build"
+            "browserTarget": "anviam_hrm:build"
           }
         },
         "test": {
@@ -119,5 +119,5 @@
       }
     }
   },
-  "defaultProject": "hrm_forntend"
+  "defaultProject": "anviam_hrm"
 }
