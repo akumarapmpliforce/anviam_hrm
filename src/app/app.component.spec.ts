@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'hrm_forntend'`, () => {
+  it(`should have as title 'anviam_hrm'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('hrm_forntend');
+    expect(app.title).toEqual('anviam_hrm');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('hrm_forntend app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('anviam_hrm app is running!');
   });
 });
