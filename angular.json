@@ -1,13 +1,19 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "ee55b38a-6860-4fde-8e68-96729fef1338"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "frontend_rebillon": {
+    "hrm_forntend": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
+        },
+        "@schematics/angular:application": {
+          "strict": true
         }
       },
       "root": "",
@@ -17,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/frontend_rebillon",
+            "outputPath": "dist/hrm_forntend",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -25,16 +31,19 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/manifest.webmanifest"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "./node_modules/@angular/material/prebuilt-themes/purple-green.css",
               "src/styles.scss",
-              "./node_modules/bootstrap/dist/css/bootstrap.min.css"              
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": [
               "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
-            ]
+            ],
+            "serviceWorker": true,
+            "ngswConfigPath": "ngsw-config.json"
           },
           "configurations": {
             "production": {
@@ -73,10 +82,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "frontend_rebillon:build:production"
+              "browserTarget": "hrm_forntend:build:production"
             },
             "development": {
-              "browserTarget": "frontend_rebillon:build:development"
+              "browserTarget": "hrm_forntend:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -84,7 +93,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "frontend_rebillon:build"
+            "browserTarget": "hrm_forntend:build"
           }
         },
         "test": {
@@ -97,10 +106,11 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/manifest.webmanifest"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "./node_modules/@angular/material/prebuilt-themes/purple-green.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -109,7 +119,5 @@
       }
     }
   },
-  "cli": {
-    "analytics": "1c95ed05-39be-4acc-86a0-09c488cf2df3"
-  }
+  "defaultProject": "hrm_forntend"
 }

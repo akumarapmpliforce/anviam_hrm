@@ -7,20 +7,20 @@ import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from 'src/app/modules/material.module';
+import { PageLayoutModule } from 'src/app/page-layout/page-layout.module';
 
 const routes: Routes = [
   // {
   //   path: '',
-  //   pathMatch: 'full',
   //   children: [
   //     { path: 'login', component: LoginComponent },
   //     { path: 'signup', component: SignupComponent },
   //     { path: 'email-verification', component: EmailVerificationComponent },
   //   ],
   // },
-  // { path: 'login', component: LoginComponent },
-  // { path: 'signup', component: SignupComponent },
-  // { path: 'email-verification', component: EmailVerificationComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'signup', component: SignupComponent },
+  { path: 'email-verification', component: EmailVerificationComponent },
 ];
 
 @NgModule({
@@ -30,8 +30,8 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     SharedModule,
     ReactiveFormsModule,
-    FormsModule,
     MaterialModule,
+    PageLayoutModule
   ],
 })
 export class AuthModule {}

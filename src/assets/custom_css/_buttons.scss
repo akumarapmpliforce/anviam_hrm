@@ -18,7 +18,7 @@
   padding-right: $p-right !important;
   padding-bottom: $p-bottom !important;
   padding-left: $p-left !important;
-  border-radius: 16px;
+  // border-radius: 16px;
 }
 @mixin input($font-size, $line-height) {
   font-style: normal;
@@ -54,10 +54,10 @@
 }
 
 .btn-primary {
-  background: var(--brand-g) !important;
+  // background: var(--brand-g) !important;
   border: none;
 }
 .btn-secondary {
-  background: var(--secondary_shade) !important;
+  // background: var(--secondary_shade) !important;
   border: none;
 }

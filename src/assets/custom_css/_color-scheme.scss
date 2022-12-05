@@ -48,17 +48,17 @@
 /*Effect Styles*/
 
 .hover-shadow {
-  background: #c4c4c4 !important;
+  // background: #c4c4c4 !important;
   box-shadow: 0px 4px 0px rgba(22, 8, 49, 0.03) !important;
 }
 
 .selected-shadow {
-  background: #c4c4c4 !important;
+  // background: #c4c4c4 !important;
   box-shadow: 0px 4px 0px #632cc7 !important;
 }
 
-.shadow {
-  background: #c4c4c4 !important;
+.shadow-custom {
+  // background: #c4c4c4 !important;
   box-shadow: 0px 15px 40px rgba(22, 8, 49, 0.1) !important;
 }
 

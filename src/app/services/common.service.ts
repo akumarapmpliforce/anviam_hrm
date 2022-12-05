@@ -13,4 +13,7 @@ export class CommonService {
   // getCountry(object: any = null): Observable<any> {
   //   return this.http.get(apiUrl.Country);
   // }
+  getImageVideo(){
+    return this.http.get('./assets/json/data.json')
+  }
 }
