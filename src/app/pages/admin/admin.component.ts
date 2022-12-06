@@ -9,10 +9,12 @@ import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 export class AdminComponent implements OnInit {
   constructor(private breakpointObserver: BreakpointObserver) {
     this.breakpointObserver
-      .observe(['(max-width: 992px)'])
+      .observe(['(orientation: portrait)', '(orientation: landscape)'])
       .subscribe((state: BreakpointState) => {
         if (state.matches) {
-          document.getElementById('menu-btn')!.click();
+          setTimeout(() => {
+            document.getElementById('menu-btn')!.click();
+          }, 500);
         }
       });
   }
