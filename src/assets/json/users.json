@@ -8,6 +8,22 @@
     "password": 123456789
   },
   {
+    "id": 4,
+    "first_name": "Nabullah",
+    "lastname": "Ansari",
+    "email": "nabullarock@gmail.com",
+    "profile_img": "",
+    "password": 123456
+  },
+  {
+    "id": 5,
+    "first_name": "Nabullah",
+    "lastname": "Ansari",
+    "email": "admin@admin.in",
+    "profile_img": "",
+    "password": "password@2021"
+  },
+  {
     "id": 2,
     "first_name": "Shubham",
     "lastname": "Dhiman",
