@@ -3,6 +3,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { whitespaceValidator } from 'src/app/functions/functions';
 import { AuthService } from 'src/app/services/auth.service';
+import Swal from 'sweetalert2';
+const swal = require('sweetalert2');
 
 @Component({
   selector: 'app-login',
@@ -52,6 +54,15 @@ export class LoginComponent implements OnInit {
           ele.email == this.loginForm.value.email &&
           ele.password == this.loginForm.value.password
         ) {
+          Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Login Successfull',
+            showConfirmButton: false,
+            width:400,
+            heightAuto:true,
+            timer: 1500,
+          });
           console.log('Login Successfull');
           this.router.navigate(['/admin/dashboard']);
         } else {
