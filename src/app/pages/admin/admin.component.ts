@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
+import { fadeInAnimation } from 'src/app/shared/animations/route-animation';
 
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
   styleUrls: ['./admin.component.scss'],
+  animations: [fadeInAnimation],
+  host: { '[@fadeInAnimation]': '' },
 })
 export class AdminComponent implements OnInit {
   constructor(private breakpointObserver: BreakpointObserver) {
