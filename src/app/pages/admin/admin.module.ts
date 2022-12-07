@@ -7,7 +7,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { PageLayoutModule } from 'src/app/page-layout/page-layout.module';
 import { AdminComponent } from './admin.component';
 import { HeaderComponent } from 'src/app/page-layout/header-admin/header.component';
-import { ProfileComponent } from 'src/app/shared/components/profile/profile.component';
+import { ProfileComponent } from 'src/app/pages/admin/profile/profile.component';
 
 const routes: Routes = [
   {

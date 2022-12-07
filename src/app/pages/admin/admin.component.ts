@@ -9,7 +9,7 @@ import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 export class AdminComponent implements OnInit {
   constructor(private breakpointObserver: BreakpointObserver) {
     this.breakpointObserver
-      .observe(['(orientation: portrait)', '(orientation: landscape)'])
+      .observe(['(orientation: portrait)'])
       .subscribe((state: BreakpointState) => {
         if (state.matches) {
           setTimeout(() => {
