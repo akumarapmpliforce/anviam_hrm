@@ -1,14 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ProfileComponent } from './components/profile/profile.component';
+import { ProfileInfoComponent } from './components/profile-info/profile-info.component';
+import { MaterialModule } from '../modules/material.module';
 
-const components = [ProfileComponent]
+const components = [ProfileInfoComponent];
 
 @NgModule({
   declarations: [components],
-  imports: [
-    CommonModule,
-  ],
-  exports:[components]
+  imports: [CommonModule, MaterialModule],
+  exports: [components],
 })
-export class SharedModule { }
+export class SharedModule {}
