@@ -1,6 +1,6 @@
 <div class="side-navbar active-nav d-flex justify-content-between flex-wrap flex-column" id="sidebar">
   <ul class="nav flex-column text-white w-100">
-    <app-profile-info [data]="profileData"></app-profile-info>
+    <app-profile-info [data]="profileData" [name]="user_name"></app-profile-info>
     <hr class="my-0">
     <li class="nav-link d-flex align-items-center cursor-pointer" [routerLink]="['/admin/dashboard']"
       routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">

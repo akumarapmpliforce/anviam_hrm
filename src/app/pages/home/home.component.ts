@@ -1,4 +1,3 @@
-import { CommonService } from './../../services/common.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import {
   FullCalendarComponent,
@@ -7,6 +6,7 @@ import {
 } from '@fullcalendar/angular';
 
 import { formatDate } from '@fullcalendar/angular';
+import { CommonApiService } from 'src/app/services/common-api.service';
 
 @Component({
   selector: 'app-home',
@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit {
   // { title: 'event 1', date: '2022-12-06'},
   // { title: 'event 2', date: '2022-12-07'},
 
-  constructor(private commonSer: CommonService) {}
+  constructor(private commonSer: CommonApiService) {}
 
   ngOnInit(): void {
     this.commonSer.getImageVideo().subscribe((res: any) => {

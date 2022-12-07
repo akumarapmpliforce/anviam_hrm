@@ -55,15 +55,31 @@ export class LoginComponent implements OnInit {
     this.submitted = true;
     this.authService.signin().subscribe((res: any) => {
       res.forEach((ele: any) => {
-        if (ele.email == this.loginForm.value.email && ele.password == this.loginForm.value.password) {
+        if (
+          ele.email == this.loginForm.value.email &&
+          ele.password == this.loginForm.value.password
+        ) {
           this.ngxService.stop();
           this.router.navigate(['/admin/dashboard']);
-          Swal.fire({position: 'top-end',title: 'Login Successfull',showConfirmButton: false,width: 500,timer: 2000,toast: true,
+          Swal.fire({
+            position: 'top-end',
+            title: 'Login Successfull',
+            showConfirmButton: false,
+            width: 500,
+            timer: 2000,
+            toast: true,
           });
         } else {
           console.log('Please check Creditantial');
         }
       });
+      const results = res.filter(
+        (entry: any) =>
+          entry.email == this.loginForm.value.email &&
+          entry.password == this.loginForm.value.password
+      );
+      localStorage.setItem('hrm-user', JSON.stringify(results[0]));
+      this.authService.userLoggedIn$.next(true);
     });
   }
 }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from 'src/app/interface/interface';
+import { CommonService } from 'src/app/services/common.service';
 import { fadeInAnimation } from 'src/app/shared/animations/route-animation';
 
 @Component({
@@ -9,19 +11,15 @@ import { fadeInAnimation } from 'src/app/shared/animations/route-animation';
   styleUrls: ['./dashboard.component.scss'],
 })
 export class DashboardComponent implements OnInit {
-  constructor() {}
+  user!: User;
+  user_name!: string;
+  constructor(private common: CommonService) {}
 
   ngOnInit(): void {
-    // var menu_btn = document.querySelector('#menu-btn')!;
-    // var sidebar = document.querySelector('#sidebar')!;
-    // var container = document.querySelector('.my-container')!;
-    // menu_btn.addEventListener('click', () => {
-    //   sidebar.classList.toggle('active-nav');
-    //   container.classList.toggle('active-cont');
-    // });
+    this.common.userDetails().subscribe((user: User) => {
+      this.user = user;
+      this.user_name = user.first_name + ' ' + user.last_name;
+      console.log(user);
+    });
   }
-
-  // let paylocad = {
-
-  // }
 }
