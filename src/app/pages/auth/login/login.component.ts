@@ -3,13 +3,15 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { whitespaceValidator } from 'src/app/functions/functions';
 import { AuthService } from 'src/app/services/auth.service';
+import { fadeInAnimation } from 'src/app/shared/animations/route-animation';
 import Swal from 'sweetalert2';
-const swal = require('sweetalert2');
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
+  animations: [fadeInAnimation],
+  host: { '[@fadeInAnimation]': '' },
 })
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
@@ -56,14 +58,14 @@ export class LoginComponent implements OnInit {
         ) {
           Swal.fire({
             position: 'top-end',
-            icon: 'success',
             title: 'Login Successfull',
             showConfirmButton: false,
-            width:400,
-            heightAuto:true,
-            timer: 1500,
+            background: '#40b61d',
+            backdrop: false,
+            width: 400,
+            timer: 2000,
+            toast: true,
           });
-          console.log('Login Successfull');
           this.router.navigate(['/admin/dashboard']);
         } else {
           console.log('Please check Creditantial');

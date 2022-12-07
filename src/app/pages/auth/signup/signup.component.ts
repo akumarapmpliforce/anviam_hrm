@@ -5,16 +5,19 @@ import {
   ConfirmedValidator,
   whitespaceValidator,
 } from 'src/app/functions/functions';
+import { fadeInAnimation } from 'src/app/shared/animations/route-animation';
 
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.scss'],
+  animations: [fadeInAnimation],
+  host: { '[@fadeInAnimation]': '' },
 })
 export class SignupComponent implements OnInit {
   SignUpForm!: FormGroup;
   submitted: boolean = false;
-  constructor(private fb: FormBuilder, private router:Router) {}
+  constructor(private fb: FormBuilder, private router: Router) {}
 
   ngOnInit(): void {
     this.initForm();
@@ -57,6 +60,6 @@ export class SignupComponent implements OnInit {
   }
   onSubmit() {
     this.submitted = true;
-    console.log(this.SignUpForm.value)
+    console.log(this.SignUpForm.value);
   }
 }

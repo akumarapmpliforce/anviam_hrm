@@ -1,5 +1,5 @@
 <app-header-top></app-header-top>
-<div class="w-75 mx-auto mb-3 mt-6 ">
+<div class="w-75 mx-auto mb-3 mt-6 signin-main-container">
   <div class="row d-flex justify-content-center align-items-center h-100">
     <div class="col col-xl-10">
       <div class="card shadow-custom">
@@ -14,9 +14,9 @@
               <form [formGroup]="SignUpForm" (ngSubmit)="onSubmit()" class="mx-1 mx-md-4">
                 <div class="d-flex align-items-center  mb-3 pb-1">
                   <span class="h1 fw-bold mb-0">Anviam HRM</span>
-              </div>
-              <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Create a new account
-              </h5>
+                </div>
+                <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Create a new account
+                </h5>
                 <div class="d-flex flex-row align-items-center mb-4">
                   <div class="form-outline flex-fill mb-0">
                     <input type="text" class="form-control" placeholder="First Name" formControlName="firstname" />

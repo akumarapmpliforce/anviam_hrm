@@ -6,3 +6,8 @@
   background: -webkit-linear-gradient(to left, #859398, #283048);
   background: linear-gradient(to left, #859398, #283048);
 }
+@media (max-width: "576px") {
+  .signin-main-container {
+    width: 90% !important;
+  }
+}

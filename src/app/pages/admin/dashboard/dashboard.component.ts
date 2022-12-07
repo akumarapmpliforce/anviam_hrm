@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { fadeInAnimation } from 'src/app/shared/animations/route-animation';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
+  animations: [fadeInAnimation],
+  host: { '[@fadeInAnimation]': '' },
   styleUrls: ['./dashboard.component.scss'],
 })
 export class DashboardComponent implements OnInit {
