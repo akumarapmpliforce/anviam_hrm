@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { NgxUiLoaderService } from 'ngx-ui-loader';
 import { whitespaceValidator } from 'src/app/functions/functions';
 import { AuthService } from 'src/app/services/auth.service';
 import { fadeInAnimation } from 'src/app/shared/animations/route-animation';
@@ -19,7 +20,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private router: Router,
-    private authService: AuthService
+    private authService: AuthService,
+    private ngxService: NgxUiLoaderService
   ) {}
 
   ngOnInit(): void {
@@ -49,24 +51,15 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
+    this.ngxService.start();
     this.submitted = true;
     this.authService.signin().subscribe((res: any) => {
       res.forEach((ele: any) => {
-        if (
-          ele.email == this.loginForm.value.email &&
-          ele.password == this.loginForm.value.password
-        ) {
-          Swal.fire({
-            position: 'top-end',
-            title: 'Login Successfull',
-            showConfirmButton: false,
-            background: '#40b61d',
-            backdrop: false,
-            width: 400,
-            timer: 2000,
-            toast: true,
-          });
+        if (ele.email == this.loginForm.value.email && ele.password == this.loginForm.value.password) {
+          this.ngxService.stop();
           this.router.navigate(['/admin/dashboard']);
+          Swal.fire({position: 'top-end',title: 'Login Successfull',showConfirmButton: false,width: 500,timer: 2000,toast: true,
+          });
         } else {
           console.log('Please check Creditantial');
         }
