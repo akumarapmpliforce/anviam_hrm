@@ -1,4 +1,4 @@
-import { CommonService } from './../../../services/common.service';
+import { CommonApiService,  } from '../../../services/common-api.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -10,11 +10,10 @@ export class CarouselComponent implements OnInit {
 
   carouselData! : any[];
 
-  constructor(private commonService:CommonService) { }
+  constructor(private commonService:CommonApiService) { }
 
   ngOnInit(): void {
     this.commonService.getImageVideo().subscribe((res:any)=>{
-      console.log(res);
       this.carouselData = res;
     })
   }

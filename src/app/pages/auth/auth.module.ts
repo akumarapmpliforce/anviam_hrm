@@ -10,14 +10,6 @@ import { MaterialModule } from 'src/app/modules/material.module';
 import { PageLayoutModule } from 'src/app/page-layout/page-layout.module';
 
 const routes: Routes = [
-  // {
-  //   path: '',
-  //   children: [
-  //     { path: 'login', component: LoginComponent },
-  //     { path: 'signup', component: SignupComponent },
-  //     { path: 'email-verification', component: EmailVerificationComponent },
-  //   ],
-  // },
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'email-verification', component: EmailVerificationComponent },

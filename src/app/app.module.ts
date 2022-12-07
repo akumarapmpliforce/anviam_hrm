@@ -26,8 +26,6 @@ import { LoaderModule } from './modules/loader.module';
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       registrationStrategy: 'registerWhenStable:30000',
-      // Register the ServiceWorker as soon as the application is stable
-      // or after 30 seconds (whichever comes first).
     }),
     NgxUiLoaderModule,
     LoaderModule,

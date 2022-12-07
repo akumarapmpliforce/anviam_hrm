@@ -10,7 +10,7 @@ import { fadeInAnimation } from 'src/app/shared/animations/route-animation';
   host: { '[@fadeInAnimation]': '' },
 })
 export class AdminComponent implements OnInit {
-  constructor(private breakpointObserver: BreakpointObserver) {
+  constructor(private breakpointObserver: BreakpointObserver,) {
     this.breakpointObserver
       .observe(['(orientation: portrait)'])
       .subscribe((state: BreakpointState) => {
