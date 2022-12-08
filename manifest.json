@@ -1,0 +1,16 @@
+{
+  "name": "Anviam HRM",
+  "version": "0.2",
+  "description": "Anviam HRM Progressive Web App",
+  "browser_action": {
+    "default_popup": "chromeExtension.html",
+    "default_title": "Anviam HRM",
+    "default_icon": {
+      "32": "favicon-32x32.png"
+    }
+  },
+  "icons": {
+    "32": "favicon-32x32.png"
+  },
+  "manifest_version": 2
+}
