@@ -7,7 +7,7 @@
     "pImage": "./assets/logo/1.jpg",
     "password": 123456789,
     "employeeDetail": {
-      "position": "Junior Angular Developer",
+      "position": "Junior Software Developer",
       "department": "Angular Department",
       "team_leader": "Rajinder Sharma",
       "gender": "Male",
