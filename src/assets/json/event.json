@@ -1,0 +1,40 @@
+[
+    {
+        "id" : 1,
+        "type":"Birthday",
+        "name" : "shiv",
+        "birthday_date" : "2022-12-06"
+    },
+    {
+        "id" : 2,
+        "type":"Birthday",
+        "name" : "kartik",
+        "birthday_date" : "2022-12-15"
+    },
+    {
+        "id" : 3,
+        "type":"Birthday",
+        "name" : "nabullah",
+        "birthday_date" : "2022-12-25"
+    },
+    {
+        "id" : 4,
+        "type":"Birthday",
+        "name" : "arjun",
+        "birthday_date" : "2022-12-09"
+        
+    },
+    {
+        "id" : 5,
+        "type":"Birthday",
+        "name" : "anuj",
+        "birthday_date" : "2022-12-19"
+    },
+    {
+        "id" : 6,
+        "type":"Birthday",
+        "name" : "par",
+        "birthday_date" : "2022-12-31"
+    }
+    
+]

@@ -1,18 +1,20 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { apiUrl } from '../endpoints/api';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
+  userLoggedIn$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+
   constructor(private http: HttpClient) {}
 
-  signup(object: object): Observable<any> {
-    return this.http.get(apiUrl.signUp);
+  signup(payload: object): Observable<any> {
+    return this.http.get(apiUrl.signUp, payload);
   }
-  signin(object: object): Observable<any> {
-    return this.http.get(apiUrl.signIn);
+  signin(): Observable<any> {
+    return this.http.get('./assets/json/users.json');
   }
 }

@@ -1,19 +1,14 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { apiUrl } from '../endpoints/api';
+import { of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CommonService {
-  constructor(private http: HttpClient) {}
+  constructor() {}
 
-  // sample api use 
-  // getCountry(object: any = null): Observable<any> {
-  //   return this.http.get(apiUrl.Country);
-  // }
-  getImageVideo(){
-    return this.http.get('./assets/json/data.json')
+  userDetails() {
+    let user = JSON.parse(localStorage.getItem('hrm-user')!);
+    return of(user);
   }
 }

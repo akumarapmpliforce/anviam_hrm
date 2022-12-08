@@ -3,8 +3,10 @@
   height: 100%;
   position: fixed;
   margin-left: -300px;
-  background-color: var(--bg-color);
+  background: var(--gradient-3);
   transition: 0.5s;
+  box-shadow: 2px 0px 5px 0px rgb(0 0 0 / 75%);
+  z-index: 100;
 }
 .nav-link,
 .sidemenu-icon svg {
@@ -40,9 +42,6 @@
 .my-container input {
   border-radius: 2rem;
   padding: 2px 20px;
-}
-.logo {
-  margin: 24px 64px 56px 24px;
 }
 
 ul li {

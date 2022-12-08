@@ -2,12 +2,19 @@
   position: relative;
   width: 100%;
 }
-
-// .menu-active {
-//  left: 60% !important;
-//  transition:left 0.3s ease-in;
-// }
-// .menu-notActive{
-//   left: 0 !important;
-//   transition:left 0.3s ease-in-out;
-// }
+.main {
+  margin-left: 240px;
+  transition: margin-left 0.3s ease-in-out;
+}
+.active-container {
+  margin-left: 0 !important;
+  transition: margin-left 0.3s ease-in-out;
+}
+.logo {
+  width: 20%;
+}
+.main {
+  .navbar {
+    z-index: 99;
+  }
+}

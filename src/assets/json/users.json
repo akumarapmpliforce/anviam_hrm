@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "first_name": "Nabullah",
+    "last_name": "Ansari",
+    "email": "nansari@anviam.com",
+    "pImage": "./assets/logo/1.jpg",
+    "password": 123456789,
+    "employeeDetail": {
+      "position": "Junior Software Developer",
+      "department": "Angular Department",
+      "team_leader": "Rajinder Sharma",
+      "gender": "Male",
+      "date_of_birth": "02-10-1998",
+      "employee_status": "Full Time",
+      "date_of_joining": "10-12-2020",
+      "office_location": "Quark Artrium, Mohali"
+    }
+  },
+  {
+    "id": 4,
+    "first_name": "Nabullah",
+    "last_name": "Ansari",
+    "email": "nabullarock@gmail.com",
+    "pImage": "./assets/logo/2.jpg",
+    "password": 12345689,
+    "employeeDetail": {
+      "position": "Junior Angular Developer",
+      "department": "Angular Department",
+      "team_leader": "Rajinder Sharma",
+      "gender": "Male",
+      "date_of_birth": "02-10-1998",
+      "employee_status": "Full Time",
+      "date_of_joining": "10-12-2020",
+      "office_location": "Quark Artrium, Mohali"
+    }
+  },
+  {
+    "id": 5,
+    "first_name": "Nabullah",
+    "last_name": "Ansari",
+    "email": "admin@admin.in",
+    "pImage": "./assets/logo/3.jpg",
+    "password": "password@2021",
+    "employeeDetail": {
+      "position": "Junior Angular Developer",
+      "department": "Angular Department",
+      "team_leader": "Rajinder Sharma",
+      "gender": "Male",
+      "date_of_birth": "02-10-1998",
+      "employee_status": "Full Time",
+      "date_of_joining": "10-12-2020",
+      "office_location": "Quark Artrium, Mohali"
+    }
+  },
+  {
+    "id": 2,
+    "first_name": "Shubham",
+    "last_name": "Dhiman",
+    "email": "shubham.dhiman@anviam.com",
+    "password": 123456789,
+    "employeeDetail": {
+      "position": "Junior Angular Developer",
+      "department": "Angular Department",
+      "team_leader": "Rajinder Sharma",
+      "gender": "Male",
+      "date_of_birth": "02-10-1998",
+      "employee_status": "Full Time",
+      "date_of_joining": "10-12-2020",
+      "office_location": "Quark Artrium, Mohali"
+    },
+    "pImage": "./assets/logo/4.jpg"
+  },
+  {
+    "id": 3,
+    "first_name": "Shubham",
+    "last_name": "Dhiman",
+    "email": "carl@neighborz.io",
+    "password": 123456789,
+    "employeeDetail": {
+      "position": "Junior Angular Developer",
+      "department": "Angular Department",
+      "team_leader": "Rajinder Sharma",
+      "gender": "Male",
+      "date_of_birth": "02-10-1998",
+      "employee_status": "Full Time",
+      "date_of_joining": "10-12-2020",
+      "office_location": "Quark Artrium, Mohali"
+    },
+    "pImage": "./assets/logo/5.jpg"
+  }
+]

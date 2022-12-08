@@ -1,17 +1,28 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { NgxUiLoaderService } from 'ngx-ui-loader';
 import { whitespaceValidator } from 'src/app/functions/functions';
+import { AuthService } from 'src/app/services/auth.service';
+import { fadeInAnimation } from 'src/app/shared/animations/route-animation';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
+  animations: [fadeInAnimation],
+  host: { '[@fadeInAnimation]': '' },
 })
 export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
   submitted: boolean = false;
-  constructor(private fb: FormBuilder, private router: Router) {}
+  constructor(
+    private fb: FormBuilder,
+    private router: Router,
+    private authService: AuthService,
+    private ngxService: NgxUiLoaderService
+  ) {}
 
   ngOnInit(): void {
     this.initForm();
@@ -40,7 +51,35 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
+    this.ngxService.start();
     this.submitted = true;
+    this.authService.signin().subscribe((res: any) => {
+      res.forEach((ele: any) => {
+        if (
+          ele.email == this.loginForm.value.email &&
+          ele.password == this.loginForm.value.password
+        ) {
+          this.ngxService.stop();
+          this.router.navigate(['/admin/dashboard']);
+          Swal.fire({
+            position: 'top-end',
+            title: 'Login Successfull',
+            showConfirmButton: false,
+            width: 500,
+            timer: 2000,
+            toast: true,
+          });
+        } else {
+          console.log('Please check Creditantial');
+        }
+      });
+      const results = res.filter(
+        (entry: any) =>
+          entry.email == this.loginForm.value.email &&
+          entry.password == this.loginForm.value.password
+      );
+      localStorage.setItem('hrm-user', JSON.stringify(results[0]));
+      this.authService.userLoggedIn$.next(true);
+    });
   }
-  
 }

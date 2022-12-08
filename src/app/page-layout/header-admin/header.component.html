@@ -1,29 +1,19 @@
 <div class="side-navbar active-nav d-flex justify-content-between flex-wrap flex-column" id="sidebar">
-  <ul class="nav flex-column text-white w-100">
-    <a class="w-100 p-0 position-relative">
-      <img src="./assets/logo/sidenav-logo.svg" alt="" class="logo">
-      <!-- <i class="bi bi-arrow-right-circle-fill position-absolute top-0 left-100" id="menu-btn"></i> -->
-    </a>
+  <ul class="nav flex-column text-white w-100 mt-4">
+    <app-profile-info [data]="profileData" [name]="user_name"></app-profile-info>
     <hr class="my-0">
-    <li class="nav-link d-flex align-items-center" [routerLink]="['/admin/dashboard']" routerLinkActive="active"
-      [routerLinkActiveOptions]="{ exact: true }">
+    <li class="nav-link d-flex align-items-center cursor-pointer" [routerLink]="['/admin/dashboard']"
+      routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
       <mat-icon class="me-1 ms-3">dashboard</mat-icon>
       <span class="ms-2 mt-1">Dashboard</span>
     </li>
     <hr class="my-0">
-    <li class="nav-link d-flex align-items-center" [routerLink]="['/auth/login']" routerLinkActive="active">
+    <li class="nav-link d-flex align-items-center cursor-pointer" [routerLink]="['/admin/profile']"
+      routerLinkActive="active">
       <mat-icon class="me-1 ms-3">dashboard</mat-icon>
-      <span class="ms-2 mt-1">Login</span>
+      <span class="ms-2 mt-1">My Profile</span>
     </li>
     <hr class="my-0">
-    <!-- <li href="#" class="nav-link">
-      <i class="bx bx-user-check"></i>
-      <span class="mx-2">Profile</span>
-    </li> -->
-    <!-- <li href="#" class="nav-link">
-      <i class="bx bx-conversation"></i>
-      <span class="mx-2">Contact</span>
-    </li> -->
   </ul>
 
 </div>
