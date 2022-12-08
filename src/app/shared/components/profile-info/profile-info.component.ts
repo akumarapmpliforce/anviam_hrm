@@ -3,7 +3,7 @@ import { Component, Input, OnInit } from '@angular/core';
 @Component({
   selector: 'app-profile-info',
   template: ` <div
-    class="container1 mb-3 mt-4"
+    class="container1"
     [ngClass]="userDetails ? 'd-flex align-items-center gap-2' : ' '"
   >
     <div class="profile">
@@ -23,10 +23,10 @@ import { Component, Input, OnInit } from '@angular/core';
         </h6>
       </div>
     </div>
-    <div class="user-details" *ngIf="userDetails != null">
-      <h4 class="">Nabullah Ansari</h4>
-      <p class="p3">Angular Developer</p>
-      <p class="p4">Angular Department</p>
+    <div class="user-details ms-3" *ngIf="userDetails != null">
+      <h4 class="mb-1 user-title">Nabullah Ansari</h4>
+      <p class="p3 mb-0">Angular Developer</p>
+      <p class="p5 mb-0">Angular Department</p>
     </div>
   </div>`,
   styles: ['.custom-profile { width: 100px;height: 100px;}'],

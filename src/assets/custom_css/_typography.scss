@@ -4,6 +4,7 @@
 // Heading
 
 @mixin heading($font-size, $line-hight, $font-weight) {
+  font-family: "Raleway", sans-serif !important;
   font-size: $font-size !important;
   line-height: $line-hight !important;
   font-weight: $font-weight !important;
