@@ -7,6 +7,16 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { PageLayoutModule } from 'src/app/page-layout/page-layout.module';
 import { AdminComponent } from './admin.component';
 import { ProfileComponent } from 'src/app/pages/admin/profile/profile.component';
+import { FullCalendarModule } from '@fullcalendar/angular';
+import dayGridPlugin from '@fullcalendar/daygrid'; // a plugin!
+import interactionPlugin from '@fullcalendar/interaction'; // a plugin!
+
+
+FullCalendarModule.registerPlugins([
+  // register FullCalendar plugins
+  dayGridPlugin,
+  interactionPlugin,
+]);
 
 const routes: Routes = [
   {
@@ -28,6 +38,7 @@ const routes: Routes = [
     MaterialModule,
     RouterModule.forChild(routes),
     PageLayoutModule,
+    FullCalendarModule
   ],
 })
 export class AdminModule {}
