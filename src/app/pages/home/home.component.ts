@@ -1,12 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import {
-  FullCalendarComponent,
-  CalendarOptions,
-  Calendar,
-} from '@fullcalendar/angular';
-
-import { formatDate } from '@fullcalendar/angular';
+import { FullCalendarComponent, CalendarOptions } from '@fullcalendar/angular';
 import { CommonApiService } from 'src/app/services/common-api.service';
+import tippy from 'tippy.js';
 
 @Component({
   selector: 'app-home',
@@ -81,6 +76,12 @@ export class HomeComponent implements OnInit {
         initialView: 'dayGridMonth',
         dateClick: this.handleDateClick.bind(this), // bind is important!
         events: event,
+
+        eventDidMount: (info) => {
+          tippy(info.el, {
+            content: info.event.title,
+          });
+        },
       };
     });
   }
