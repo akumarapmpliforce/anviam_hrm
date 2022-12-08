@@ -1,41 +1,31 @@
 <app-header-top></app-header-top>
-<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true" style="margin-top:4.4rem ;">
-    <div class="carousel-inner w-100" style="height: 30rem;">
-        <ng-container *ngFor="let items of imageVideoData">
-            <div *ngIf="items?.video" class="carousel-item active designDiv" data-bs-interval="5000">
-                <video controls class="myvid w-100 img-fluid" id="player2">
-                    <source src="{{items.path}}" type="video/mp4">
-                </video>
-            </div>
-            <div *ngIf="items?.image" class="carousel-item designDiv" data-bs-interval="5000">
-                <img src="{{items.path}}" class="d-block  w-100" alt="...">
-            </div>
-        </ng-container>
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true" style="margin-top:4.4rem;">
+    <div class="carousel-inner w-100 card designCard" >
+        <app-carousel [carouselData]="birthday_Event"></app-carousel>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-        data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-        data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
 </div>
-
-
-
-<div class="container-fluid mt-5 mb-5">
+<div>
+    <div class="container mt-5 mb-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card designCard">
+                    <app-carousel [carouselData]="anniversary_Event"></app-carousel>
+                </div>
+            </div>
+            <div class="col-md-6" style="background-color:#e2eef9;">
+                <!-- <button (click)="toggleWeekends()">toggle weekends</button> -->
+                <full-calendar #calendar [options]="calendarOptions"></full-calendar>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
     <div class="row">
         <div class="col-md-6">
-            
-            <!-- <button (click)="toggleWeekends()">toggle weekends</button> -->
-            <full-calendar #calendar [options]="calendarOptions"></full-calendar>
-
+            <app-carousel [carouselData]="month_Event"></app-carousel>
         </div>
         <div class="col-md-6">
-            <app-carousel></app-carousel>
+            <app-carousel [carouselData]="celebration_Event"></app-carousel>
         </div>
     </div>
 </div>
