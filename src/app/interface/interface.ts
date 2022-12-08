@@ -17,4 +17,8 @@ export interface EmployeeDetail {
   employee_status: string;
   date_of_joining: string;
   office_location: string;
+    birthday_Event: string;
+    anniversary: string;
+    celebration: string;
+    month: string;
 }

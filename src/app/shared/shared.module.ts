@@ -1,9 +1,11 @@
+import { MaterialModule } from './../modules/material.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProfileInfoComponent } from './components/profile-info/profile-info.component';
-import { MaterialModule } from '../modules/material.module';
 
-const components = [ProfileInfoComponent];
+import { CarouselComponent } from './components/carousel/carousel.component';
+
+const components = [ProfileInfoComponent, CarouselComponent];
 
 @NgModule({
   declarations: [components],
