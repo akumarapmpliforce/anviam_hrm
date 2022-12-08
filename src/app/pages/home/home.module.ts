@@ -7,6 +7,7 @@ import { FullCalendarModule } from '@fullcalendar/angular';
 import dayGridPlugin from '@fullcalendar/daygrid'; // a plugin!
 import interactionPlugin from '@fullcalendar/interaction'; // a plugin!
 import { PageLayoutModule } from 'src/app/page-layout/page-layout.module';
+import { MaterialModule } from 'src/app/modules/material.module';
 
 const routes: Routes = [{ path: '', component: HomeComponent }];
 
@@ -25,6 +26,7 @@ FullCalendarModule.registerPlugins([
     FullCalendarModule,
     PageLayoutModule,
     SharedModule,
+    MaterialModule
   ],
 })
 export class HomeModule {}
