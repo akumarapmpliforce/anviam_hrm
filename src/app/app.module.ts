@@ -14,6 +14,7 @@ import { environment } from '../environments/environment';
 import { NgxUiLoaderModule } from 'ngx-ui-loader';
 import { LoaderModule } from './modules/loader.module';
 
+
 @NgModule({
   declarations: [AppComponent],
   imports: [

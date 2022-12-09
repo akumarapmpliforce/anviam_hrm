@@ -10,7 +10,7 @@ import { ProfileComponent } from 'src/app/pages/admin/profile/profile.component'
 import { FullCalendarModule } from '@fullcalendar/angular';
 import dayGridPlugin from '@fullcalendar/daygrid'; // a plugin!
 import interactionPlugin from '@fullcalendar/interaction'; // a plugin!
-
+import { DatePipe } from '@angular/common';
 
 FullCalendarModule.registerPlugins([
   // register FullCalendar plugins
@@ -40,5 +40,6 @@ const routes: Routes = [
     PageLayoutModule,
     FullCalendarModule
   ],
+  providers: [DatePipe],
 })
 export class AdminModule {}

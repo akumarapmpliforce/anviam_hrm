@@ -1,25 +1,24 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="col-4 my-4">
+        <div class="col-xl-4 col-sm-12 col-lg-4 justify-content-md-center col-md-12 my-4">
             <app-profile-info [data]="user" [userDetails]="user"></app-profile-info>
         </div>
-        <div class="col-8 my-4 d-flex ">
+        <div class="col--xl-8 col-sm-12 col-lg-8 justify-content-md-center col-md-12 my-4 d-flex">
             <div class="p-3">
-                <p class="">Code <strong>AS160</strong> </p>
-                <p class="">Born <strong>02 Oct 1998</strong> </p>
-                <p class="">Gender <strong>Male</strong></p>
+                <p class="">Code <strong>{{employee_code}}</strong> </p>
+                <p class="">Born  <strong>{{birth | date}}</strong> </p>
+                <p class="">Gender <strong>{{gender}}</strong></p>
 
             </div>
             <div class="p-3">
-                <p class="">Status <strong>Full Time</strong></p>
-                <p class="">Age <strong>24 Years</strong></p>
-                <p class="">Employed for <strong>10 Months</strong></p>
+                <p class="">Status <strong>{{employee_status}}</strong></p>
+                <p class="">Age <strong>{{age}} Years</strong></p>
+                <p class="">Employed for <strong>{{employee_for}} Years</strong></p>
 
             </div>
             <div class="p-3">
-                <p class="">Department <strong>Angular Department</strong></p>
-                <p class="">Location <strong>Quark Artrium</strong></p>
-
+                <p class="">Department <strong>{{department}}</strong></p>
+                <p class="">Location <strong>{{office_location}}</strong></p>
             </div>
         </div>
     </div>
@@ -29,85 +28,85 @@
     <div class="row">
         <div class="col-12">
             <div class="card">
-                <h5 class="card-header ">Featured</h5>
+                <h5 class="card-header">Featured</h5>
                 <div class="card-body">
-                    <div class="row g-4">
-                        <div class="col-md-3 col-sm-4">
-                            <div class="row align-items-end borderDesign">
-                                <div class="col-3 designDiv">
+                    <div class="row g-4 d-flex">
+                        <div class="col-xxl-3 col-sm-4 col-sm-6">
+                            <div class="row align-items-end flex-nowrap borderDesign">
+                                <div class="col-3 col-xxl-2 designDiv">
                                     <img src="assets/icons/android-chrome-192x192.png" class="designImg" alt="logo">
                                 </div>
-                                <div class="col-9">
+                                <div class="col-9 col-xxl-10">
                                     <h6>Request Time</h6>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-4">
-                            <div class="row align-items-end borderDesign">
-                                <div class="col-3 designDiv">
+                        <div class="col-xxl-3 col-sm-4 col-sm-6">
+                            <div class="row align-items-end flex-nowrap borderDesign">
+                                <div class="col-3 col-xxl-2 designDiv">
                                     <img src="assets/icons/android-chrome-192x192.png" class="designImg" alt="logo">
                                 </div>
-                                <div class="col-9">
+                                <div class="col-9 col-xxl-10">
                                     <h6>Company Directive</h6>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-4">
-                            <div class="row align-items-end borderDesign">
-                                <div class="col-3 designDiv">
+                        <div class="col-xxl-3 col-sm-4 col-sm-6">
+                            <div class="row align-items-end flex-nowrap borderDesign">
+                                <div class="col-3 col-xxl-2 designDiv">
                                     <img src="assets/icons/android-chrome-192x192.png" class="designImg" alt="logo">
                                 </div>
-                                <div class="col-9">
+                                <div class="col-9 col-xxl-10">
                                     <h6>My Profile</h6>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-4">
-                            <div class="row align-items-end borderDesign">
-                                <div class="col-3 designDiv">
+                        <div class="col-xxl-3 col-sm-4 col-sm-6">
+                            <div class="row align-items-end flex-nowrap borderDesign">
+                                <div class="col-3 col-xxl-2 designDiv">
                                     <img src="assets/icons/android-chrome-192x192.png" class="designImg" alt="logo">
                                 </div>
-                                <div class="col-9">
+                                <div class="col-9 col-xxl-10">
                                     <h6>Complete Checklist</h6>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-4">
-                            <div class="row align-items-end borderDesign">
-                                <div class="col-3 designDiv">
+                        <div class="col-xxl-3 col-sm-4 col-sm-6">
+                            <div class="row align-items-end flex-nowrap borderDesign">
+                                <div class="col-3 col-xxl-2 designDiv">
                                     <img src="assets/icons/android-chrome-192x192.png" class="designImg" alt="logo">
                                 </div>
-                                <div class="col-9">
+                                <div class="col-9 col-xxl-10">
                                     <h6>Fill in Timesheet</h6>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-4">
-                            <div class="row align-items-end borderDesign">
-                                <div class="col-3 designDiv">
+                        <div class="col-xxl-3 col-sm-4 col-sm-6">
+                            <div class="row align-items-end flex-nowrap borderDesign">
+                                <div class="col-3 col-xxl-2 designDiv">
                                     <img src="assets/icons/android-chrome-192x192.png" class="designImg" alt="logo">
                                 </div>
-                                <div class="col-9">
+                                <div class="col-9 col-xxl-10">
                                     <h6>Company Chart</h6>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-4">
-                            <div class="row align-items-end borderDesign">
-                                <div class="col-3 designDiv">
+                        <div class="col-xxl-3 col-sm-4 col-sm-6">
+                            <div class="row align-items-end flex-nowrap borderDesign">
+                                <div class="col-3 col-xxl-2 designDiv">
                                     <img src="assets/icons/android-chrome-192x192.png" class="designImg" alt="logo">
                                 </div>
-                                <div class="col-9">
+                                <div class="col-9 col-xxl-10 ">
                                     <h6>News</h6>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3 col-sm-4">
-                            <div class="row align-items-end borderDesign">
-                                <div class="col-3 designDiv">
+                        <div class="col-xxl-3 col-sm-4 col-sm-6">
+                            <div class="row align-items-end flex-nowrap borderDesign">
+                                <div class="col-3 col-xxl-2 designDiv">
                                     <img src="assets/icons/android-chrome-192x192.png" class="designImg" alt="logo">
                                 </div>
-                                <div class="col-9">
+                                <div class="col-9 col-xxl-10">
                                     <h6>File an Explore</h6>
                                 </div>
                             </div>
@@ -139,7 +138,7 @@
                 <h5 class="card-header">You Report To</h5>
                 <div class="card-body d-flex designImage">
                     <img src="assets/icons/android-chrome-192x192.png" alt="">
-                    <p class="card-title">Special title treatment</p>
+                    <p class="card-title">Rajinder Sharma</p>
                 </div>
             </div>
         </div>
@@ -147,7 +146,8 @@
             <div class="card">
                 <h5 class="card-header">Job Report To</h5>
                 <div class="card-body text-center">
-                    <p class="card-title">Special title treatment</p>
+                    <p class="card-title">Your Company Jobs Portal is at:</p>
+                    <a (click)="anviam()">Anviam.com</a>
                     <p>there are 3 new job opening are listed on the job portal</p>
                 </div>
             </div>
@@ -157,7 +157,7 @@
 
 <div class="container-fluid mb-4">
     <div class="row">
-        <div class="col-4">
+        <div class="col-3">
             <div class="card">
                 <h5 class="card-header">Active Checklists</h5>
                 <div class="card-body">
@@ -170,37 +170,27 @@
             </div>
         </div>
 
-        <div class="col-4">
+        <div class="col-5">
             <div class="card">
                 <h5 class="card-header">Active Checklists</h5>
                 <div class="card-body">
                     <table class="table">
                         <thead>
                             <tr>
-                                <td scope="col">#</td>
-                                <th scope="col">First</th>
-                                <th scope="col">Last</th>
-                                <th scope="col">Handle</th>
+                                <td scope="col"><Strong>ID</Strong></td>
+                                <th scope="col">Name</th>
+                                <th scope="col">Department</th>
+                                <th scope="col">Position</th>
+                                <th scope="col">Code</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Larry the Bird</td>
-                                <td>shubham</td>
-                                <td>@twitter</td>
+                            <tr *ngFor="let items of dataDetailsUser">
+                                <th scope="row">{{items.id}}</th>
+                                <td>{{items.first_name}}</td>
+                                <td>{{items.employeeDetail.department}}</td>
+                                <td>{{items.employeeDetail.position}}</td>
+                                <td>{{items.employeeDetail.employee_code}}</td>
                             </tr>
                         </tbody>
                     </table>
@@ -214,30 +204,20 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <td scope="col">#</td>
-                                <th scope="col">First</th>
-                                <th scope="col">Last</th>
-                                <th scope="col">Handle</th>
+                                <td scope="col"><Strong>ID</Strong></td>
+                                <th scope="col">Name</th>
+                                <th scope="col">Born</th>
+                                <th scope="col">Gender</th>
+                                <th scope="col">Age</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Larry the Bird</td>
-                                <td>shubham</td>
-                                <td>@twitter</td>
+                            <tr *ngFor="let items of dataDetailsUser">
+                                <th scope="row">{{items.id}}</th>
+                                <td>{{items.first_name}}</td>
+                                <td>{{items.employeeDetail.date_of_birth}}</td>
+                                <td>{{items.employeeDetail.gender}}</td>
+                                <td>{{age}} Years</td>
                             </tr>
                         </tbody>
                     </table>
@@ -248,9 +228,9 @@
 </div>
 
 
-<div class="container-fluid">
+<div class="container-fluid mb-4">
     <div class="row">
-        <div class="col-4">
+        <div class="col-5">
             <div class="card">
                 <h5 class="card-header">Calendar</h5>
                 <div class="card-body">
@@ -266,67 +246,43 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <td scope="col">#</td>
-                                <th scope="col">First</th>
-                                <th scope="col">Last</th>
-                                <th scope="col">Handle</th>
+                                <td scope="col"><Strong>ID</Strong></td>
+                                <th scope="col">Name</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Location </th>
+                                <th scope="col">Employed for</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Larry the Bird</td>
-                                <td>shubham</td>
-                                <td>@twitter</td>
+                            <tr *ngFor="let items of dataDetailsUser">
+                                <th scope="row">{{items.id}}</th>
+                                <td>{{items.first_name}}</td>
+                                <td>{{items.employeeDetail.employee_status}}</td>
+                                <td>{{items.employeeDetail.office_location}}</td>
+                                <td>{{employee_for}} Years</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
-        <div class="col-4">
+        <div class="col-3">
             <div class="card">
                 <h5 class="card-header">Active Checklists</h5>
                 <div class="card-body">
                     <table class="table">
                         <thead>
                             <tr>
-                                <td scope="col">#</td>
-                                <th scope="col">First</th>
-                                <th scope="col">Last</th>
-                                <th scope="col">Handle</th>
+                                <td scope="col"><Strong>ID</Strong></td>
+                                <th scope="col">Name</th>
+                                <th scope="col">TL Name</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Larry the Bird</td>
-                                <td>shubham</td>
-                                <td>@twitter</td>
+                            <tr *ngFor="let items of dataDetailsUser">
+                                <th scope="row">{{items.id}}</th>
+                                <td>{{items.first_name}}</td>
+                                <td>{{items.employeeDetail.team_leader}}</td>
                             </tr>
                         </tbody>
                     </table>

@@ -14,10 +14,15 @@ export class CommonApiService {
   //   return this.http.get(apiUrl.Country);
   // }
   getImageVideo(){
-    return this.http.get('./assets/json/data.json')
+    return this.http.get('./assets/json/data.json');
   }
 
   getEventDetails(){
-    return this.http.get('./assets/json/event.json')
+    return this.http.get('./assets/json/event.json');
+  }
+
+  
+  dataDetails(){
+    return this.http.get("/assets/json/users.json");
   }
 }

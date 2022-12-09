@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { of } from 'rxjs';
 
@@ -5,10 +6,11 @@ import { of } from 'rxjs';
   providedIn: 'root',
 })
 export class CommonService {
-  constructor() {}
+  constructor(private http:HttpClient) {}
 
   userDetails() {
     let user = JSON.parse(localStorage.getItem('hrm-user')!);
     return of(user);
   }
+
 }

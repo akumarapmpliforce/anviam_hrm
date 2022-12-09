@@ -14,13 +14,14 @@
       "date_of_birth": "02-10-1998",
       "employee_status": "Full Time",
       "date_of_joining": "10-12-2020",
-      "office_location": "Quark Artrium, Mohali"
+      "office_location": "Quark Artrium, Mohali",
+      "employee_code": "AS160"
     }
   },
   {
-    "id": 4,
-    "first_name": "Nabullah",
-    "last_name": "Ansari",
+    "id": 2,
+    "first_name": "Arjun",
+    "last_name": "Kumar",
     "email": "nabullarock@gmail.com",
     "pImage": "./assets/logo/2.jpg",
     "password": 12345689,
@@ -32,12 +33,13 @@
       "date_of_birth": "02-10-1998",
       "employee_status": "Full Time",
       "date_of_joining": "10-12-2020",
-      "office_location": "Quark Artrium, Mohali"
+      "office_location": "Quark Artrium, Mohali",
+      "employee_code": "AS161"
     }
   },
   {
-    "id": 5,
-    "first_name": "Nabullah",
+    "id": 3,
+    "first_name": "Shivam",
     "last_name": "Ansari",
     "email": "admin@admin.in",
     "pImage": "./assets/logo/3.jpg",
@@ -50,11 +52,12 @@
       "date_of_birth": "02-10-1998",
       "employee_status": "Full Time",
       "date_of_joining": "10-12-2020",
-      "office_location": "Quark Artrium, Mohali"
+      "office_location": "Quark Artrium, Mohali",
+      "employee_code": "AS162"
     }
   },
   {
-    "id": 2,
+    "id": 4,
     "first_name": "Shubham",
     "last_name": "Dhiman",
     "email": "shubham.dhiman@anviam.com",
@@ -64,17 +67,18 @@
       "department": "Angular Department",
       "team_leader": "Rajinder Sharma",
       "gender": "Male",
-      "date_of_birth": "02-10-1998",
+      "date_of_birth": "02-10-2000",
       "employee_status": "Full Time",
       "date_of_joining": "10-12-2020",
-      "office_location": "Quark Artrium, Mohali"
+      "office_location": "Quark Artrium, Mohali",
+      "employee_code": "AS163"
     },
     "pImage": "./assets/logo/4.jpg"
   },
   {
-    "id": 3,
-    "first_name": "Shubham",
-    "last_name": "Dhiman",
+    "id": 5,
+    "first_name": "Anunaya",
+    "last_name": "Kaushik",
     "email": "carl@neighborz.io",
     "password": 123456789,
     "employeeDetail": {
@@ -85,7 +89,8 @@
       "date_of_birth": "02-10-1998",
       "employee_status": "Full Time",
       "date_of_joining": "10-12-2020",
-      "office_location": "Quark Artrium, Mohali"
+      "office_location": "Quark Artrium, Mohali",
+      "employee_code": "AS164"
     },
     "pImage": "./assets/logo/5.jpg"
   }
