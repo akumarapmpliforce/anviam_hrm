@@ -1,40 +1,46 @@
 [
     {
         "id" : 1,
-        "type":"Birthday",
-        "name" : "shiv",
+        "type":"Anniversary",
+        "name" : "Shivam",
         "birthday_date" : "2022-12-06"
     },
     {
         "id" : 2,
         "type":"Birthday",
-        "name" : "kartik",
+        "name" : "Kartik",
         "birthday_date" : "2022-12-15"
     },
     {
         "id" : 3,
         "type":"Birthday",
-        "name" : "nabullah",
+        "name" : "Nabullah",
         "birthday_date" : "2022-12-25"
     },
     {
         "id" : 4,
-        "type":"Birthday",
-        "name" : "arjun",
+        "type":"Celebration",
+        "name" : "Arjun",
         "birthday_date" : "2022-12-09"
         
     },
     {
         "id" : 5,
         "type":"Birthday",
-        "name" : "anuj",
+        "name" : "Anunaya",
         "birthday_date" : "2022-12-19"
     },
     {
         "id" : 6,
         "type":"Birthday",
-        "name" : "par",
-        "birthday_date" : "2022-12-31"
+        "name" : "Parveen",
+        "birthday_date" : "2023-01-01"
+    },
+    {
+        "id" : 7,
+        "type":"Birthday",
+        "name" : "Aakash",
+        "birthday_date" : "2023-01-08"
     }
     
 ]
