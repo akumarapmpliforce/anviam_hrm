@@ -21,4 +21,7 @@ export interface EmployeeDetail {
   anniversary: string;
   celebration: string;
   month: string;
+  employee_code: string,
+  employee_age: string,
+  employee_for: string,
 }

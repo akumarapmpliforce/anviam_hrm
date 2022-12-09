@@ -4,7 +4,7 @@ import { Component, Input, OnInit } from '@angular/core';
   selector: 'app-profile-info',
   template: ` <div
     class="container1"
-    [ngClass]="userDetails ? 'd-flex align-items-center gap-2' : ' '"
+    [ngClass]="userDetails ? 'd-flex align-items-center justify-content-center gap-2' : ' '"
   >
     <div class="profile">
       <div class="mx-auto my-2 custom-profile">
@@ -24,9 +24,9 @@ import { Component, Input, OnInit } from '@angular/core';
       </div>
     </div>
     <div class="user-details ms-3" *ngIf="userDetails != null">
-      <h4 class="mb-1 user-title">Nabullah Ansari</h4>
-      <p class="p3 mb-0">Angular Developer</p>
-      <p class="p5 mb-0">Angular Department</p>
+      <h4 class="mb-1 user-title">{{userDetails.first_name + " " +userDetails.last_name}}</h4>
+      <p class="p3 mb-0">{{userDetails.employeeDetail.department}}</p>
+      <p class="p5 mb-0">{{userDetails.employeeDetail.position}}</p>
     </div>
   </div>`,
   styles: ['.custom-profile { width: 100px;height: 100px;}'],
