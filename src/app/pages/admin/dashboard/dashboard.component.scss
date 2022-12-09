@@ -32,3 +32,11 @@
 ::ng-deep .fc .fc-toolbar-title{
   font-size: 22px !important;
 }
+
+::ng-deep .fc .fc-button:not(:disabled){
+  text-transform: capitalize;
+}
+
+::ng-deep .fc .fc-button-primary:disabled{
+  text-transform: capitalize;
+}
