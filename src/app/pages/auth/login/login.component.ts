@@ -59,7 +59,6 @@ export class LoginComponent implements OnInit {
           ele.email == this.loginForm.value.email &&
           ele.password == this.loginForm.value.password
         ) {
-          this.ngxService.stop();
           this.router.navigate(['/admin/dashboard']);
           Swal.fire({
             position: 'top-end',
@@ -73,6 +72,7 @@ export class LoginComponent implements OnInit {
           console.log('Please check Creditantial');
         }
       });
+      this.ngxService.start();
       const results = res.filter(
         (entry: any) =>
           entry.email == this.loginForm.value.email &&
