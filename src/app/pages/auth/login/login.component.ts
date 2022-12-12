@@ -59,6 +59,13 @@ export class LoginComponent implements OnInit {
           ele.email == this.loginForm.value.email &&
           ele.password == this.loginForm.value.password
         ) {
+          const results = res.filter(
+            (entry: any) =>
+              entry.email == this.loginForm.value.email &&
+              entry.password == this.loginForm.value.password
+          );
+          localStorage.setItem('hrm-user', JSON.stringify(results[0]));
+          this.authService.userLoggedIn$.next(true);
           this.router.navigate(['/admin/dashboard']);
           Swal.fire({
             position: 'top-end',
@@ -72,14 +79,7 @@ export class LoginComponent implements OnInit {
           console.log('Please check Creditantial');
         }
       });
-      this.ngxService.start();
-      const results = res.filter(
-        (entry: any) =>
-          entry.email == this.loginForm.value.email &&
-          entry.password == this.loginForm.value.password
-      );
-      localStorage.setItem('hrm-user', JSON.stringify(results[0]));
-      this.authService.userLoggedIn$.next(true);
+      this.ngxService.stop();
     });
   }
 }
