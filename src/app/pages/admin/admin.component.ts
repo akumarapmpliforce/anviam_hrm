@@ -1,3 +1,4 @@
+import { AuthService } from 'src/app/services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 import { fadeInAnimation } from 'src/app/shared/animations/route-animation';
@@ -10,7 +11,7 @@ import { fadeInAnimation } from 'src/app/shared/animations/route-animation';
   host: { '[@fadeInAnimation]': '' },
 })
 export class AdminComponent implements OnInit {
-  constructor(private breakpointObserver: BreakpointObserver,) {
+  constructor(private breakpointObserver: BreakpointObserver,private authService:AuthService) {
     this.breakpointObserver
       .observe(['(orientation: portrait)'])
       .subscribe((state: BreakpointState) => {
@@ -32,5 +33,9 @@ export class AdminComponent implements OnInit {
       container.classList.toggle('active-container');
       topbar.classList.toggle('active-container');
     });
+  }
+
+  logOut(){
+    this.authService.logOut();
   }
 }

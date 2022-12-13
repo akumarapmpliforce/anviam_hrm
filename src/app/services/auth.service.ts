@@ -14,7 +14,16 @@ export class AuthService {
   signup(payload: object): Observable<any> {
     return this.http.get(apiUrl.signUp, payload);
   }
+
   signin(): Observable<any> {
     return this.http.get('./assets/json/users.json');
   }
+
+  logOut(){
+    localStorage.removeItem("hrm-user");
+    localStorage.removeItem("token");
+    this.userLoggedIn$.next(false);
+  }
+ 
+
 }

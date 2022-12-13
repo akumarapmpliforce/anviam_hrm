@@ -6,6 +6,7 @@
     "email": "nansari@anviam.com",
     "pImage": "./assets/logo/1.jpg",
     "password": 123456789,
+    "role": "superAdmin",
     "employeeDetail": {
       "position": "Junior Software Developer",
       "department": "Angular Department",
@@ -25,6 +26,7 @@
     "email": "nabullarock@gmail.com",
     "pImage": "./assets/logo/2.jpg",
     "password": 12345689,
+    "role": "admin",
     "employeeDetail": {
       "position": "Junior Angular Developer",
       "department": "Angular Department",
@@ -44,6 +46,7 @@
     "email": "admin@admin.in",
     "pImage": "./assets/logo/3.jpg",
     "password": "password@2021",
+    "role": "admin",
     "employeeDetail": {
       "position": "Junior Angular Developer",
       "department": "Angular Department",
@@ -62,6 +65,7 @@
     "last_name": "Dhiman",
     "email": "shubham.dhiman@anviam.com",
     "password": 123456789,
+    "role": "superAdmin",
     "employeeDetail": {
       "position": "Junior Angular Developer",
       "department": "Angular Department",
@@ -81,6 +85,7 @@
     "last_name": "Kaushik",
     "email": "carl@neighborz.io",
     "password": 123456789,
+    "role": "admin",
     "employeeDetail": {
       "position": "Junior Angular Developer",
       "department": "Angular Department",

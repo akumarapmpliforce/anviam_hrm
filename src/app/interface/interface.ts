@@ -6,6 +6,7 @@ export interface User {
   pImage: string;
   password: any;
   employeeDetail: EmployeeDetail;
+  role:string;
 }
 
 export interface EmployeeDetail {

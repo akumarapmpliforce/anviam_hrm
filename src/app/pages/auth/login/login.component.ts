@@ -1,3 +1,4 @@
+import { CommonService } from './../../../services/common.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -21,8 +22,9 @@ export class LoginComponent implements OnInit {
     private fb: FormBuilder,
     private router: Router,
     private authService: AuthService,
-    private ngxService: NgxUiLoaderService
-  ) {}
+    private ngxService: NgxUiLoaderService,
+    private commonService : CommonService
+    ) {}
 
   ngOnInit(): void {
     this.initForm();
@@ -64,8 +66,11 @@ export class LoginComponent implements OnInit {
               entry.email == this.loginForm.value.email &&
               entry.password == this.loginForm.value.password
           );
+          const token = this.commonService.generateToken(200);
+          localStorage.setItem('token',token);
           localStorage.setItem('hrm-user', JSON.stringify(results[0]));
           this.authService.userLoggedIn$.next(true);
+
           this.router.navigate(['/admin/dashboard']);
           Swal.fire({
             position: 'top-end',
@@ -82,4 +87,8 @@ export class LoginComponent implements OnInit {
       this.ngxService.stop();
     });
   }
+
+
+ 
+
 }

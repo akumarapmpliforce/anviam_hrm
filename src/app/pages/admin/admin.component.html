@@ -10,7 +10,7 @@
                     </a>
                 </div>
                 <div class="text-end right-nav-items w-100">
-                    <button mat-stroked-button color="warn" class="" [routerLink]="['/auth/login']">Logout</button>
+                    <button mat-stroked-button color="warn" class="" (click)="logOut()" [routerLink]="['/auth/login']">Logout</button>
                 </div>
             </div>
         </nav>

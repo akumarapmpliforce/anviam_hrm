@@ -47,7 +47,6 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
     this.common.userDetails().subscribe((user: User) => {
-      console.log(user);
       this.birth = user.employeeDetail.date_of_birth;
       this.department = user.employeeDetail.department;
       this.gender = user.employeeDetail.gender;
