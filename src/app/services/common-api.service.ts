@@ -25,4 +25,8 @@ export class CommonApiService {
   dataDetails(){
     return this.http.get("/assets/json/users.json");
   }
+
+  userTime(){
+    return this.http.get("/assets/json/time.json");
+  }
 }

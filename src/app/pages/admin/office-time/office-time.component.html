@@ -1,0 +1,20 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Employee Name</th>
+      <th scope="col">Time In</th>
+      <th scope="col">Time Out</th>
+      <th scope="col">Total Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let items of timeCount">
+      <th scope="row">{{items.id}}</th>
+      <td>{{items.Name}}</td>
+      <td>{{items.timeIn | date:'medium'}}</td>
+      <td>{{items.timeOut | date:'medium'}}</td>
+      <td>{{items.totalHour}} hr {{items.totalMin}} min</td>
+    </tr>
+  </tbody>
+</table>

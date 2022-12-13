@@ -11,6 +11,7 @@ import { FullCalendarModule } from '@fullcalendar/angular';
 import dayGridPlugin from '@fullcalendar/daygrid'; // a plugin!
 import interactionPlugin from '@fullcalendar/interaction'; // a plugin!
 import { DatePipe } from '@angular/common';
+import { OfficeTimeComponent } from './office-time/office-time.component';
 
 FullCalendarModule.registerPlugins([
   // register FullCalendar plugins
@@ -26,12 +27,13 @@ const routes: Routes = [
       { path: '', pathMatch: 'full', redirectTo: 'dashboard' },
       { path: 'dashboard', component: DashboardComponent },
       { path: 'profile', component: ProfileComponent },
+      { path: 'time-count', component:OfficeTimeComponent},
     ],
   },
 ];
 
 @NgModule({
-  declarations: [AdminComponent, DashboardComponent, ProfileComponent],
+  declarations: [AdminComponent, DashboardComponent, ProfileComponent, OfficeTimeComponent],
   imports: [
     CommonModule,
     SharedModule,
