@@ -1,14 +1,16 @@
 import { Router } from '@angular/router';
-import { EmployeeDetail, User } from './../../../interface/interface';
+import { User } from './../../../interface/interface';
 import { CommonService } from 'src/app/services/common.service';
 import { CommonApiService } from 'src/app/services/common-api.service';
 import { Component, OnInit } from '@angular/core';
-import {filter} from 'rxjs/operators';
+import { fadeInAnimation } from 'src/app/shared/animations/route-animation';
 
 @Component({
   selector: 'app-office-time',
   templateUrl: './office-time.component.html',
   styleUrls: ['./office-time.component.scss'],
+  animations: [fadeInAnimation],
+  host: { '[@fadeInAnimation]': '' },
 })
 export class OfficeTimeComponent implements OnInit {
   timeCount!: any[];
@@ -23,7 +25,7 @@ export class OfficeTimeComponent implements OnInit {
   constructor(
     private commonApiService: CommonApiService,
     private commonService: CommonService,
-    private route:Router
+    private route: Router
   ) {}
 
   ngOnInit(): void {
@@ -39,8 +41,8 @@ export class OfficeTimeComponent implements OnInit {
 
   timeDetails() {
     this.commonApiService.userTime().subscribe((res: any) => {
-      const userDetails:any = localStorage.getItem('hrm-user');
-      if( JSON.parse(userDetails).role === 'Hr-department'){
+      const userDetails: any = localStorage.getItem('hrm-user');
+      if (JSON.parse(userDetails).role === 'Hr-department') {
         this.timeCount = res;
         for (let i = 0; i < this.timeCount.length; i++) {
           this.data = this.getDataDiff(
@@ -52,10 +54,9 @@ export class OfficeTimeComponent implements OnInit {
           this.timeCount[i]['totalMin'] = this.officeMin;
           this.timeCount[i]['totalHour'] = this.officeHour;
         }
-      }
-      else if(JSON.parse(userDetails).role === 'Team-leader'){
-        this.timeCount = res.filter((ele:any) => ele.department === "angular")
-        
+      } else if (JSON.parse(userDetails).role === 'Team-leader') {
+        this.timeCount = res.filter((ele: any) => ele.department === 'angular');
+
         for (let i = 0; i < this.timeCount.length; i++) {
           this.data = this.getDataDiff(
             new Date(this.timeCount[i].timeIn),
@@ -66,10 +67,11 @@ export class OfficeTimeComponent implements OnInit {
           this.timeCount[i]['totalMin'] = this.officeMin;
           this.timeCount[i]['totalHour'] = this.officeHour;
         }
-      }
-      else if(JSON.parse(userDetails).role === 'Employee'){
-        this.timeCount = res.filter((ele:any) => ele.userId === JSON.parse(userDetails).id)
-        
+      } else if (JSON.parse(userDetails).role === 'Employee') {
+        this.timeCount = res.filter(
+          (ele: any) => ele.userId === JSON.parse(userDetails).id
+        );
+
         for (let i = 0; i < this.timeCount.length; i++) {
           this.data = this.getDataDiff(
             new Date(this.timeCount[i].timeIn),
@@ -104,7 +106,7 @@ export class OfficeTimeComponent implements OnInit {
     return { day: days, hour: hours, minute: minutes, second: seconds };
   }
 
-  viewDetails(){
+  viewDetails() {
     this.route.navigate(['/admin/view-details']);
   }
 }

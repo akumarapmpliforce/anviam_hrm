@@ -16,7 +16,9 @@
       "employee_status": "Full Time",
       "date_of_joining": "10-12-2020",
       "office_location": "Quark Artrium, Mohali",
-      "employee_code": "AS160",
+      "employee_code": "AS160"
+    },
+    "asset_provided": {
       "laptop": "CA-720",
       "charger": "CA-720",
       "mouse": "AM-98"
@@ -39,7 +41,9 @@
       "employee_status": "Full Time",
       "date_of_joining": "10-12-2020",
       "office_location": "Quark Artrium, Mohali",
-      "employee_code": "AS161",
+      "employee_code": "AS161"
+    },
+    "asset_provided": {
       "laptop": "CA-420",
       "charger": "CA-420",
       "mouse": "AM-07"
@@ -62,7 +66,9 @@
       "employee_status": "Full Time",
       "date_of_joining": "10-12-2020",
       "office_location": "Quark Artrium, Mohali",
-      "employee_code": "AS162",
+      "employee_code": "AS162"
+    },
+    "asset_provided": {
       "laptop": "CA-576",
       "charger": "CA-576",
       "mouse": "AM-80"
@@ -84,7 +90,9 @@
       "employee_status": "Full Time",
       "date_of_joining": "10-12-2020",
       "office_location": "Quark Artrium, Mohali",
-      "employee_code": "AS163",
+      "employee_code": "AS163"
+    },
+    "asset_provided": {
       "laptop": "CA-581",
       "charger": "CA-581",
       "mouse": "AM-18"
@@ -107,7 +115,9 @@
       "employee_status": "Full Time",
       "date_of_joining": "10-12-2020",
       "office_location": "Quark Artrium, Mohali",
-      "employee_code": "AS164",
+      "employee_code": "AS164"
+    },
+    "asset_provided": {
       "laptop": "CA-570",
       "charger": "CA-570",
       "mouse": "AM-92"
@@ -130,7 +140,9 @@
       "employee_status": "Full Time",
       "date_of_joining": "10-12-2020",
       "office_location": "Quark Artrium, Mohali",
-      "employee_code": "AS164",
+      "employee_code": "AS164"
+    },
+    "asset_provided": {
       "laptop": "CA-582",
       "charger": "CA-582",
       "mouse": "AM-82"
