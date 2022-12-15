@@ -13,6 +13,7 @@ import interactionPlugin from '@fullcalendar/interaction'; // a plugin!
 import { DatePipe } from '@angular/common';
 import { OfficeTimeComponent } from './office-time/office-time.component';
 import { AuthGuard } from 'src/app/guard/auth.guard';
+import { ViewDetailsComponent } from './view-details/view-details.component';
 
 FullCalendarModule.registerPlugins([
   // register FullCalendar plugins
@@ -29,12 +30,13 @@ const routes: Routes = [
       { path: 'dashboard', canActivate:[AuthGuard], component: DashboardComponent },
       { path: 'profile', component: ProfileComponent },
       { path: 'time-count', component:OfficeTimeComponent},
+      { path: 'view-details',component:ViewDetailsComponent}
     ],
   },
 ];
 
 @NgModule({
-  declarations: [AdminComponent, DashboardComponent, ProfileComponent, OfficeTimeComponent],
+  declarations: [AdminComponent, DashboardComponent, ProfileComponent, OfficeTimeComponent, ViewDetailsComponent],
   imports: [
     CommonModule,
     SharedModule,

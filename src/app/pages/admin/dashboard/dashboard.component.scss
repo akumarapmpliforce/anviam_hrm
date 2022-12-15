@@ -40,3 +40,30 @@
 ::ng-deep .fc .fc-button-primary:disabled{
   text-transform: capitalize;
 }
+
+.overflowDesign{
+  overflow: auto;
+}
+@media only screen and (max-width: 720px) {
+  ::ng-deep .fc .fc-toolbar-title{
+    font-size: 14px !important;
+  }
+  ::ng-deep .fc{
+    font-size: 11px !important;
+  } 
+}
+
+@media only screen and (max-width: 576px) {
+  ::ng-deep .fc .fc-toolbar-title{
+    font-size: 12px !important;
+  }
+  ::ng-deep .fc{
+    font-size: 10px !important;
+  } 
+}
+
+@media only screen and (max-width: 425px) {
+  .buttonDesign{
+    font-size: 10px;
+  }
+}

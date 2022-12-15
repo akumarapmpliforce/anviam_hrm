@@ -1,3 +1,5 @@
+import { EmployeeDetail } from './../../../interface/interface';
+import { filter } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { User } from 'src/app/interface/interface';
@@ -10,8 +12,7 @@ import {
 } from '@fullcalendar/angular';
 import { CommonApiService } from 'src/app/services/common-api.service';
 import tippy from 'tippy.js';
-
-
+import { info } from 'console';
 
 @Component({
   selector: 'app-dashboard',
@@ -25,15 +26,15 @@ export class DashboardComponent implements OnInit {
   user!: User;
   user_name!: string;
   dataDetailsUser!: any[];
-  birth!:string;
+  birth!: string;
   department!: string;
-  gender!:string;
+  gender!: string;
   office_location!: string;
-  employee_status!:string;
-  employee_for!:any;
-  employee_code!:string;
-  employee_age!:any;
-  age:any;
+  employee_status!: string;
+  employee_for!: any;
+  employee_code!: string;
+  employee_age!: any;
+  age: any;
 
   @ViewChild('calendar')
   calendarComponent!: FullCalendarComponent;
@@ -42,7 +43,7 @@ export class DashboardComponent implements OnInit {
   constructor(
     private common: CommonService,
     private commonSer: CommonApiService,
-    private router:Router
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -53,7 +54,7 @@ export class DashboardComponent implements OnInit {
       this.office_location = user.employeeDetail.office_location;
       this.employee_status = user.employeeDetail.employee_status;
       this.employee_for = this.calculate(user.employeeDetail.date_of_joining);
-      this.employee_code = user.employeeDetail.employee_code; 
+      this.employee_code = user.employeeDetail.employee_code;
       this.age = this.calculate(user.employeeDetail.date_of_birth);
       this.user = user;
       this.user_name = user.first_name + ' ' + user.last_name;
@@ -62,30 +63,37 @@ export class DashboardComponent implements OnInit {
     this.dataDetails();
   }
 
-  calculate(date:any){
+  calculate(date: any) {
     var dob = new Date(date);
     var month_diff = Date.now() - dob.getTime();
-    var age_dt = new Date(month_diff); 
+    var age_dt = new Date(month_diff);
     var year = age_dt.getUTCFullYear();
     var age = Math.abs(year - 1970);
-    return age
+    return age;
   }
 
-  dataDetails(){
-    this.commonSer.dataDetails().subscribe((res:any)=>{
-      this.dataDetailsUser = res;
-      
-    })
+  dataDetails() {
+    this.commonSer.dataDetails().subscribe((res: any) => {
+
+      const info: any = localStorage.getItem('hrm-user');
+      const userInfo = JSON.parse(info);
+      if (userInfo.role === 'Hr-department') {
+        this.dataDetailsUser = res;
+      } else if (userInfo.role === 'Team-leader') {
+        this.dataDetailsUser = res.filter(
+          (ele: any) => ele.employeeDetail.department === 'Angular Department'
+        );
+      } else if (userInfo.role === 'Employee') {
+        this.dataDetailsUser = res.filter((ele: any) => ele.id === userInfo.id);
+      }
+    });
   }
 
-  anviam(){
-    this.router.navigate(["https://www.google.com/"]);
+  anviam() {
+    this.router.navigate(['https://www.google.com/']);
   }
 
-  
-
-
-  someMethod() { 
+  someMethod() {
     let calendarApi = this.calendarComponent.getApi();
     calendarApi.next();
   }
@@ -113,11 +121,7 @@ export class DashboardComponent implements OnInit {
     });
   }
 
-  
   handleDateClick(arg: { dateStr: string }) {
     alert('You Clicked Date ' + arg.dateStr);
   }
- 
-  
-  
 }
