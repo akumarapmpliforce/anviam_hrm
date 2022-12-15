@@ -1,5 +1,3 @@
-import { EmployeeDetail } from './../../../interface/interface';
-import { filter } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { User } from 'src/app/interface/interface';
@@ -12,7 +10,6 @@ import {
 } from '@fullcalendar/angular';
 import { CommonApiService } from 'src/app/services/common-api.service';
 import tippy from 'tippy.js';
-import { info } from 'console';
 
 @Component({
   selector: 'app-dashboard',
@@ -35,6 +32,7 @@ export class DashboardComponent implements OnInit {
   employee_code!: string;
   employee_age!: any;
   age: any;
+  role: any;
 
   @ViewChild('calendar')
   calendarComponent!: FullCalendarComponent;
@@ -58,6 +56,7 @@ export class DashboardComponent implements OnInit {
       this.age = this.calculate(user.employeeDetail.date_of_birth);
       this.user = user;
       this.user_name = user.first_name + ' ' + user.last_name;
+      this.role = user.role;
     });
     this.eventData();
     this.dataDetails();

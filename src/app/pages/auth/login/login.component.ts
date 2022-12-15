@@ -23,8 +23,8 @@ export class LoginComponent implements OnInit {
     private router: Router,
     private authService: AuthService,
     private ngxService: NgxUiLoaderService,
-    private commonService : CommonService
-    ) {}
+    private commonService: CommonService
+  ) {}
 
   ngOnInit(): void {
     this.initForm();
@@ -67,10 +67,9 @@ export class LoginComponent implements OnInit {
               entry.password == this.loginForm.value.password
           );
           const token = this.commonService.generateToken(200);
-          localStorage.setItem('token',token);
+          localStorage.setItem('token', token);
           localStorage.setItem('hrm-user', JSON.stringify(results[0]));
-          this.authService.userLoggedIn$.next(true);
-
+          this.ngxService.stop();
           this.router.navigate(['/admin/dashboard']);
           Swal.fire({
             position: 'top-end',
@@ -87,8 +86,4 @@ export class LoginComponent implements OnInit {
       this.ngxService.stop();
     });
   }
-
-
- 
-
 }
