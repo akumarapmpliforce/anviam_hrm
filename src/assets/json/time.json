@@ -1,38 +1,50 @@
 [
     {
         "id":1,
+        "userId":4,
         "Name":"Shubham",
         "timeIn":"2022-04-05T01:13:54.000000Z",
-        "timeOut":"2022-04-05T10:23:54.000000Z"
+        "timeOut":"2022-04-05T10:23:54.000000Z",
+        "department" : "angular"
     },
     {
         "id":2,
+        "userId":1,
         "Name":"Nabullah",
         "timeIn":"2022-04-05T01:13:54.000000Z",
-        "timeOut":"2022-04-05T10:13:54.000000Z"
+        "timeOut":"2022-04-05T10:13:54.000000Z",
+        "department" : "angular"
     },
     {
         "id":3,
-        "Name":"Parveen",
+        "userId":3,
+        "Name":"Shivam",
         "timeIn":"2022-04-05T01:13:54.000000Z",
-        "timeOut":"2022-04-05T11:13:54.000000Z"
+        "timeOut":"2022-04-05T11:13:54.000000Z",
+        "department" : "angular"
     }, 
     {
         "id":4,
+        "userId":6,
         "Name":"Kartik",
         "timeIn":"2022-04-05T01:13:54.000000Z",
-        "timeOut":"2022-04-05T09:13:54.000000Z"
+        "timeOut":"2022-04-05T09:13:54.000000Z",
+        "department" : "ror"
     }, 
     {
         "id":5,
+        "userId":5,
         "Name":"Anunaya",
         "timeIn":"2022-04-05T01:13:54.000000Z",
-        "timeOut":"2022-04-05T10:13:54.000000Z"
+        "timeOut":"2022-04-05T10:13:54.000000Z",
+        "department" : "angular"
     },
     {
         "id":6,
+        "userId":2,
         "Name":"Arjun",
         "timeIn":"2022-04-05T01:13:54.000000Z",
-        "timeOut":"2022-04-05T10:13:54.000000Z"
+        "timeOut":"2022-04-05T10:13:54.000000Z",
+        "department" : "ios"
     } 
 ]
