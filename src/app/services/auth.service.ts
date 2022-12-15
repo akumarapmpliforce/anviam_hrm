@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
@@ -9,7 +10,7 @@ import { apiUrl } from '../endpoints/api';
 export class AuthService {
   userLoggedIn$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient,private router:Router) {}
 
   signup(payload: object): Observable<any> {
     return this.http.get(apiUrl.signUp, payload);
@@ -23,6 +24,7 @@ export class AuthService {
     localStorage.removeItem("hrm-user");
     localStorage.removeItem("token");
     this.userLoggedIn$.next(false);
+    this.router.navigate(['login']);
   }
  
 

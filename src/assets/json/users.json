@@ -6,7 +6,7 @@
     "email": "nansari@anviam.com",
     "pImage": "./assets/logo/1.jpg",
     "password": 123456789,
-    "role": "superAdmin",
+    "role": "super_admin",
     "employeeDetail": {
       "position": "Junior Software Developer",
       "department": "Angular Department",
@@ -25,8 +25,8 @@
     "last_name": "Kumar",
     "email": "nabullarock@gmail.com",
     "pImage": "./assets/logo/2.jpg",
-    "password": 12345689,
-    "role": "admin",
+    "password": 123456789,
+    "role": "user",
     "employeeDetail": {
       "position": "Junior Angular Developer",
       "department": "Angular Department",
@@ -45,8 +45,8 @@
     "last_name": "Ansari",
     "email": "admin@admin.in",
     "pImage": "./assets/logo/3.jpg",
-    "password": "password@2021",
-    "role": "admin",
+    "password": 123456789,
+    "role": "user",
     "employeeDetail": {
       "position": "Junior Angular Developer",
       "department": "Angular Department",
@@ -65,7 +65,7 @@
     "last_name": "Dhiman",
     "email": "shubham.dhiman@anviam.com",
     "password": 123456789,
-    "role": "superAdmin",
+    "role": "super_admin",
     "employeeDetail": {
       "position": "Junior Angular Developer",
       "department": "Angular Department",
@@ -83,12 +83,32 @@
     "id": 5,
     "first_name": "Anunaya",
     "last_name": "Kaushik",
-    "email": "carl@neighborz.io",
+    "email": "carl@neighbor.io",
     "password": 123456789,
     "role": "admin",
     "employeeDetail": {
       "position": "Junior Angular Developer",
       "department": "Angular Department",
+      "team_leader": "Rajinder Sharma",
+      "gender": "Male",
+      "date_of_birth": "02-10-1998",
+      "employee_status": "Full Time",
+      "date_of_joining": "10-12-2020",
+      "office_location": "Quark Artrium, Mohali",
+      "employee_code": "AS164"
+    },
+    "pImage": "./assets/logo/5.jpg"
+  },
+  {
+    "id": 6,
+    "first_name": "Kartik",
+    "last_name": "Sharma",
+    "email": "carl@neighborz.io",
+    "password": 123456789,
+    "role": "user",
+    "employeeDetail": {
+      "position": "Junior Ror Developer",
+      "department": "Ror Department",
       "team_leader": "Rajinder Sharma",
       "gender": "Male",
       "date_of_birth": "02-10-1998",

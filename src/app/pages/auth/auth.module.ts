@@ -8,6 +8,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from 'src/app/modules/material.module';
 import { PageLayoutModule } from 'src/app/page-layout/page-layout.module';
+import { LoginGuard } from 'src/app/guard/login.guard';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },

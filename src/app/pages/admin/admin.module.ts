@@ -12,6 +12,7 @@ import dayGridPlugin from '@fullcalendar/daygrid'; // a plugin!
 import interactionPlugin from '@fullcalendar/interaction'; // a plugin!
 import { DatePipe } from '@angular/common';
 import { OfficeTimeComponent } from './office-time/office-time.component';
+import { AuthGuard } from 'src/app/guard/auth.guard';
 
 FullCalendarModule.registerPlugins([
   // register FullCalendar plugins
@@ -25,7 +26,7 @@ const routes: Routes = [
     component: AdminComponent,
     children: [
       { path: '', pathMatch: 'full', redirectTo: 'dashboard' },
-      { path: 'dashboard', component: DashboardComponent },
+      { path: 'dashboard', canActivate:[AuthGuard], component: DashboardComponent },
       { path: 'profile', component: ProfileComponent },
       { path: 'time-count', component:OfficeTimeComponent},
     ],
