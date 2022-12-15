@@ -6,7 +6,7 @@
     "email": "nansari@anviam.com",
     "pImage": "./assets/logo/1.jpg",
     "password": 123456789,
-    "role": "super_admin",
+    "role": "Hr-department",
     "employeeDetail": {
       "position": "Junior Software Developer",
       "department": "Angular Department",
@@ -16,7 +16,10 @@
       "employee_status": "Full Time",
       "date_of_joining": "10-12-2020",
       "office_location": "Quark Artrium, Mohali",
-      "employee_code": "AS160"
+      "employee_code": "AS160",
+      "laptop": "CA-720",
+      "charger": "CA-720",
+      "mouse": "AM-98"
     }
   },
   {
@@ -26,7 +29,7 @@
     "email": "nabullarock@gmail.com",
     "pImage": "./assets/logo/2.jpg",
     "password": 123456789,
-    "role": "user",
+    "role": "Employee",
     "employeeDetail": {
       "position": "Junior Angular Developer",
       "department": "Angular Department",
@@ -36,7 +39,10 @@
       "employee_status": "Full Time",
       "date_of_joining": "10-12-2020",
       "office_location": "Quark Artrium, Mohali",
-      "employee_code": "AS161"
+      "employee_code": "AS161",
+      "laptop": "CA-420",
+      "charger": "CA-420",
+      "mouse": "AM-07"
     }
   },
   {
@@ -46,17 +52,20 @@
     "email": "admin@admin.in",
     "pImage": "./assets/logo/3.jpg",
     "password": 123456789,
-    "role": "user",
+    "role": "Employee",
     "employeeDetail": {
       "position": "Junior Angular Developer",
-      "department": "Angular Department",
+      "department": "Node Js",
       "team_leader": "Rajinder Sharma",
       "gender": "Male",
       "date_of_birth": "02-10-1998",
       "employee_status": "Full Time",
       "date_of_joining": "10-12-2020",
       "office_location": "Quark Artrium, Mohali",
-      "employee_code": "AS162"
+      "employee_code": "AS162",
+      "laptop": "CA-576",
+      "charger": "CA-576",
+      "mouse": "AM-80"
     }
   },
   {
@@ -65,7 +74,7 @@
     "last_name": "Dhiman",
     "email": "shubham.dhiman@anviam.com",
     "password": 123456789,
-    "role": "super_admin",
+    "role": "Hr-department",
     "employeeDetail": {
       "position": "Junior Angular Developer",
       "department": "Angular Department",
@@ -75,7 +84,10 @@
       "employee_status": "Full Time",
       "date_of_joining": "10-12-2020",
       "office_location": "Quark Artrium, Mohali",
-      "employee_code": "AS163"
+      "employee_code": "AS163",
+      "laptop": "CA-581",
+      "charger": "CA-581",
+      "mouse": "AM-18"
     },
     "pImage": "./assets/logo/4.jpg"
   },
@@ -85,7 +97,7 @@
     "last_name": "Kaushik",
     "email": "carl@neighbor.io",
     "password": 123456789,
-    "role": "admin",
+    "role": "Team-leader",
     "employeeDetail": {
       "position": "Junior Angular Developer",
       "department": "Angular Department",
@@ -95,7 +107,10 @@
       "employee_status": "Full Time",
       "date_of_joining": "10-12-2020",
       "office_location": "Quark Artrium, Mohali",
-      "employee_code": "AS164"
+      "employee_code": "AS164",
+      "laptop": "CA-570",
+      "charger": "CA-570",
+      "mouse": "AM-92"
     },
     "pImage": "./assets/logo/5.jpg"
   },
@@ -105,7 +120,7 @@
     "last_name": "Sharma",
     "email": "carl@neighborz.io",
     "password": 123456789,
-    "role": "user",
+    "role": "Employee",
     "employeeDetail": {
       "position": "Junior Ror Developer",
       "department": "Ror Department",
@@ -115,7 +130,10 @@
       "employee_status": "Full Time",
       "date_of_joining": "10-12-2020",
       "office_location": "Quark Artrium, Mohali",
-      "employee_code": "AS164"
+      "employee_code": "AS164",
+      "laptop": "CA-582",
+      "charger": "CA-582",
+      "mouse": "AM-82"
     },
     "pImage": "./assets/logo/5.jpg"
   }

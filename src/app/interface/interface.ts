@@ -25,4 +25,7 @@ export interface EmployeeDetail {
   employee_code: string,
   employee_age: string,
   employee_for: string,
+  laptop:string,
+  charger:string,
+  mouse:string
 }

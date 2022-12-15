@@ -1,4 +1,4 @@
-<table class="table">
+<table class="table overflowDesign">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -6,6 +6,7 @@
       <th scope="col">Time In</th>
       <th scope="col">Time Out</th>
       <th scope="col">Total Time</th>
+      <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
@@ -15,6 +16,9 @@
       <td>{{items.timeIn | date:'medium'}}</td>
       <td>{{items.timeOut | date:'medium'}}</td>
       <td>{{items.totalHour}} hr {{items.totalMin}} min</td>
+      <th>
+        <button (click)="viewDetails()" class="btn btn-success"><i class="bi bi-eye"></i></button>
+      </th>
     </tr>
   </tbody>
 </table>

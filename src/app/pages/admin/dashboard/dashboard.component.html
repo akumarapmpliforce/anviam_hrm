@@ -6,7 +6,7 @@
         <div class="col--xl-8 col-sm-12 col-lg-8 justify-content-md-center col-md-12 my-4 d-flex">
             <div class="p-3">
                 <p class="">Code <strong>{{employee_code}}</strong> </p>
-                <p class="">Born  <strong>{{birth | date}}</strong> </p>
+                <p class="">Born <strong>{{birth | date}}</strong> </p>
                 <p class="">Gender <strong>{{gender}}</strong></p>
 
             </div>
@@ -245,9 +245,9 @@
                 <h5 class="card-header">Calendar</h5>
                 <div class="card-body">
                     <full-calendar #calendar [options]="calendarOptions"></full-calendar>
-                    
+
                 </div>
-              </div>
+            </div>
         </div>
         <div class="col-4 col-xl-6 col-12 mb-3 ">
             <div class="card overflowDesign" style="height: 100%;">
@@ -285,14 +285,18 @@
                             <tr>
                                 <td scope="col"><Strong>ID</Strong></td>
                                 <th scope="col">Name</th>
-                                <th scope="col">TL Name</th>
+                                <th scope="col">Laptop No.</th>
+                                <th scope="col">Charger No.</th>
+                                <th scope="col">Mouse No.</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr *ngFor="let items of dataDetailsUser">
                                 <th scope="row">{{items.id}}</th>
                                 <td>{{items.first_name}}</td>
-                                <td>{{items.employeeDetail.team_leader}}</td>
+                                <td>{{items.employeeDetail.laptop}}</td>
+                                <td>{{items.employeeDetail.charger}}</td>
+                                <td>{{items.employeeDetail.mouse}}</td>
                             </tr>
                         </tbody>
                     </table>

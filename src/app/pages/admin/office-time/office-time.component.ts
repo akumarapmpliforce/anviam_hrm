@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { EmployeeDetail, User } from './../../../interface/interface';
 import { CommonService } from 'src/app/services/common.service';
 import { CommonApiService } from 'src/app/services/common-api.service';
@@ -21,7 +22,8 @@ export class OfficeTimeComponent implements OnInit {
 
   constructor(
     private commonApiService: CommonApiService,
-    private commonService: CommonService
+    private commonService: CommonService,
+    private route:Router
   ) {}
 
   ngOnInit(): void {
@@ -37,10 +39,8 @@ export class OfficeTimeComponent implements OnInit {
 
   timeDetails() {
     this.commonApiService.userTime().subscribe((res: any) => {
-      console.log(res);
       const userDetails:any = localStorage.getItem('hrm-user');
-      console.log(JSON.parse(userDetails).role);
-      if( JSON.parse(userDetails).role === 'super_admin'){
+      if( JSON.parse(userDetails).role === 'Hr-department'){
         this.timeCount = res;
         for (let i = 0; i < this.timeCount.length; i++) {
           this.data = this.getDataDiff(
@@ -53,10 +53,8 @@ export class OfficeTimeComponent implements OnInit {
           this.timeCount[i]['totalHour'] = this.officeHour;
         }
       }
-      else if(JSON.parse(userDetails).role === 'admin'){
-        debugger
+      else if(JSON.parse(userDetails).role === 'Team-leader'){
         this.timeCount = res.filter((ele:any) => ele.department === "angular")
-        console.log(this.timeCount);
         
         for (let i = 0; i < this.timeCount.length; i++) {
           this.data = this.getDataDiff(
@@ -69,10 +67,8 @@ export class OfficeTimeComponent implements OnInit {
           this.timeCount[i]['totalHour'] = this.officeHour;
         }
       }
-      else if(JSON.parse(userDetails).role === 'user'){
-        debugger
+      else if(JSON.parse(userDetails).role === 'Employee'){
         this.timeCount = res.filter((ele:any) => ele.userId === JSON.parse(userDetails).id)
-        console.log(this.timeCount);
         
         for (let i = 0; i < this.timeCount.length; i++) {
           this.data = this.getDataDiff(
@@ -106,5 +102,9 @@ export class OfficeTimeComponent implements OnInit {
       Math.floor(diff / 1000) -
       (days * 24 * 60 * 60 + hours * 60 * 60 + minutes * 60);
     return { day: days, hour: hours, minute: minutes, second: seconds };
+  }
+
+  viewDetails(){
+    this.route.navigate(['/admin/view-details']);
   }
 }
