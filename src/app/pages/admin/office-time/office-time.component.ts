@@ -106,7 +106,7 @@ export class OfficeTimeComponent implements OnInit {
     return { day: days, hour: hours, minute: minutes, second: seconds };
   }
 
-  viewDetails() {
-    this.route.navigate(['/admin/view-details']);
+  viewDetails(id:number) {
+    this.route.navigate([`/admin/view-details/${id}`]);
   }
 }

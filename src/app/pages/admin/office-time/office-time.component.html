@@ -17,7 +17,7 @@
       <td>{{items.timeOut | date:'medium'}}</td>
       <td>{{items.totalHour}} hr {{items.totalMin}} min</td>
       <th>
-        <button (click)="viewDetails()" class="btn btn-success"><i class="bi bi-eye"></i></button>
+        <button (click)="viewDetails(items.id)" class="btn btn-success"><i class="bi bi-eye"></i></button>
       </th>
     </tr>
   </tbody>
