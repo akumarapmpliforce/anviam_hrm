@@ -30,7 +30,7 @@ const routes: Routes = [
       { path: 'dashboard', canActivate:[AuthGuard], component: DashboardComponent },
       { path: 'profile', component: ProfileComponent },
       { path: 'time-count', component:OfficeTimeComponent},
-      { path: 'view-details',component:ViewDetailsComponent}
+      { path: 'view-details/:id',component:ViewDetailsComponent}
     ],
   },
 ];

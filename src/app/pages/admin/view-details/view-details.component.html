@@ -1,1 +1,29 @@
-<p>view-details works!</p>
+<div>
+    <button class="btn btn-primary" (click)="backButton()">Back</button>
+</div>
+
+<div class="container designDiv mt-5 mb-3 p-3">
+    <h2 class="text-center desginBorder">Total Working Hours</h2>
+    <div class="row">
+        <div class="col">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Time In</th>
+                        <th scope="col">Time Out</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let items of timeDetails let i = index">
+                        <td scope="row">
+                            <p *ngFor="let time of items.time_in let i = index">{{time}}</p>
+                        </td>
+                        <td scope="row">
+                            <p *ngFor="let time of items.time_out let i = index">{{time}}</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

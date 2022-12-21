@@ -5,7 +5,15 @@
         "Name":"Shubham",
         "timeIn":"2022-04-05T01:13:54.000000Z",
         "timeOut":"2022-04-05T10:23:54.000000Z",
-        "department" : "angular"
+        "department" : "angular",
+        "employee_code": "AS177",
+        "time":[
+            {
+                "time_in":["10:00am","10:40am","11:50am","2:30pm","2:45pm","5:00pm"],
+                "time_out":["10:30am","11:40am","1:30pm","2:40am","4:50am","7:00pm"]
+            }
+        ]
+            
     },
     {
         "id":2,
@@ -13,7 +21,14 @@
         "Name":"Nabullah",
         "timeIn":"2022-04-05T01:13:54.000000Z",
         "timeOut":"2022-04-05T10:13:54.000000Z",
-        "department" : "angular"
+        "department" : "Angular",
+        "employee_code": "AS160",
+        "time":[
+            {
+                "time_in":["9:50am","10:40am","11:50am","2:30pm","2:45pm","5:00pm"],
+                "time_out":["10:30am","11:40am","1:30pm","2:40am","4:50am","7:00pm"]
+            }
+        ]
     },
     {
         "id":3,
@@ -21,7 +36,14 @@
         "Name":"Shivam",
         "timeIn":"2022-04-05T01:13:54.000000Z",
         "timeOut":"2022-04-05T11:13:54.000000Z",
-        "department" : "angular"
+        "department" : "Angular",
+        "employee_code": "AS162",
+        "time":[
+            {
+                "time_in":["9:45am","10:40am","11:50am","2:30pm","2:45pm","5:00pm"],
+                "time_out":["10:30am","11:40am","1:30pm","2:40am","4:50am","7:00pm"]
+            }
+        ]
     }, 
     {
         "id":4,
@@ -29,7 +51,14 @@
         "Name":"Kartik",
         "timeIn":"2022-04-05T01:13:54.000000Z",
         "timeOut":"2022-04-05T09:13:54.000000Z",
-        "department" : "ror"
+        "department" : "Ror",
+        "employee_code": "AS165",
+        "time":[
+            {
+                "time_in":["9:30am","10:40am","11:50am","2:30pm","2:45pm","5:00pm"],
+                "time_out":["10:30am","11:40am","1:30pm","2:40am","4:50am","7:00pm"]
+            }
+        ]
     }, 
     {
         "id":5,
@@ -37,7 +66,14 @@
         "Name":"Anunaya",
         "timeIn":"2022-04-05T01:13:54.000000Z",
         "timeOut":"2022-04-05T10:13:54.000000Z",
-        "department" : "angular"
+        "department" : "Angular",
+        "employee_code": "AS164",
+        "time":[
+            {
+                "time_in":["9:00am","10:40am","11:50am","2:30pm","2:45pm","5:00pm"],
+                "time_out":["10:30am","11:40am","1:30pm","2:40am","4:50am","7:00pm"]
+            }
+        ]
     },
     {
         "id":6,
@@ -45,6 +81,14 @@
         "Name":"Arjun",
         "timeIn":"2022-04-05T01:13:54.000000Z",
         "timeOut":"2022-04-05T10:13:54.000000Z",
-        "department" : "ios"
-    } 
+        "department" : "Ios",
+        "employee_code": "AS161",
+        "time":[
+            {
+                "time_in":["10:40am","11:50am","2:30pm","2:45pm","5:00pm"],
+                "time_out":["11:40am","1:30pm","2:40am","4:50am","7:00pm"]
+            }
+        ]
+    }
+
 ]
