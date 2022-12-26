@@ -1,0 +1,25 @@
+<div class="container-fluid main-container-width-with-header" style="margin-top: 62px">
+    <h3>LP - Support & Collaboration</h3>
+    <div class="row">
+      <div class="col-md-8">
+        <h5>Connect with Peer</h5>
+  
+        <!-- Video & screen share container -->
+        <h4 class="mb-3">PeerId: {{peerId}}</h4>
+        <div id="remote-video"></div>
+        <br>
+        <div style="margin-top: 20px;">
+          <!-- <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          </div> -->
+          <input type="text" class="form-control"  [(ngModel)]='peerIdShare' placeholder="Peer Id" />
+          <button class="btn btn-success mx-2 my-2" (click)="connectWithPeer()">Call Peer</button>
+          <button class="btn btn-success mx-2 my-2" (click)="screenShare()">Screen share</button>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <h5>List of Users</h5>
+      </div>
+    </div>
+  </div>
