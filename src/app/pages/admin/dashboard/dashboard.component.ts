@@ -1,13 +1,9 @@
 import { Router } from '@angular/router';
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { User } from 'src/app/interface/interface';
 import { CommonService } from 'src/app/services/common.service';
 import { fadeInAnimation } from 'src/app/shared/animations/route-animation';
-import {
-  FullCalendarComponent,
-  CalendarOptions,
-  Calendar,
-} from '@fullcalendar/angular';
+import { FullCalendarComponent, CalendarOptions } from '@fullcalendar/angular';
 import { CommonApiService } from 'src/app/services/common-api.service';
 import tippy from 'tippy.js';
 
@@ -18,7 +14,7 @@ import tippy from 'tippy.js';
   host: { '[@fadeInAnimation]': '' },
   styleUrls: ['./dashboard.component.scss'],
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent implements OnInit, AfterViewInit {
   eventDetails!: any[];
   user!: User;
   user_name!: string;
@@ -33,6 +29,8 @@ export class DashboardComponent implements OnInit {
   employee_age!: any;
   age: any;
   role: any;
+  departmentEmployee: any[] = [];
+  reportTo!: string;
 
   @ViewChild('calendar')
   calendarComponent!: FullCalendarComponent;
@@ -43,6 +41,10 @@ export class DashboardComponent implements OnInit {
     private commonSer: CommonApiService,
     private router: Router
   ) {}
+
+  ngAfterViewInit(): void {
+    this.departmentCollegue(this.department);
+  }
 
   ngOnInit(): void {
     this.common.userDetails().subscribe((user: User) => {
@@ -57,9 +59,11 @@ export class DashboardComponent implements OnInit {
       this.user = user;
       this.user_name = user.first_name + ' ' + user.last_name;
       this.role = user.role;
+      this.reportTo = user.employeeDetail.team_leader;
     });
     this.eventData();
     this.dataDetails();
+    // this.webscrappingAnviam();
   }
 
   calculate(date: any) {
@@ -73,7 +77,6 @@ export class DashboardComponent implements OnInit {
 
   dataDetails() {
     this.commonSer.dataDetails().subscribe((res: any) => {
-
       const info: any = localStorage.getItem('hrm-user');
       const userInfo = JSON.parse(info);
       if (userInfo.role === 'Hr-department') {
@@ -88,9 +91,9 @@ export class DashboardComponent implements OnInit {
     });
   }
 
-  anviam() {
-    this.router.navigate(['https://www.google.com/']);
-  }
+  // anviam() {
+  //   this.router.navigate(['https://www.google.com/']);
+  // }
 
   someMethod() {
     let calendarApi = this.calendarComponent.getApi();
@@ -123,4 +126,27 @@ export class DashboardComponent implements OnInit {
   handleDateClick(arg: { dateStr: string }) {
     alert('You Clicked Date ' + arg.dateStr);
   }
+
+  departmentCollegue(department: string) {
+    this.commonSer.dataDetails().subscribe((res: any) => {
+      res.forEach((element: User) => {
+        if (element.employeeDetail.department === department) {
+          this.departmentEmployee.push(element);
+        }
+      });
+    });
+  }
+
+  // webscrappingAnviam() {
+  //   const headers = {
+  //     'Access-Control-Allow-Origin': '*',
+  //   };
+  //   let href = 'https://anviam.com/career';
+  //   (async () => {
+  //     const response = await fetch('https://anviam.com/career',);
+  //     const text = await response.json();
+  //     console.log('===============================::::::::', response);
+  //     console.log('===============================::::::::', text);
+  //   })();
+  // }
 }
