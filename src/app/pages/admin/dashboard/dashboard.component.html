@@ -139,7 +139,7 @@
                 <h5 class="card-header">You Report To</h5>
                 <div class="card-body d-flex designImage align-items-center">
                     <img src="assets/icons/android-chrome-192x192.png" alt="">
-                    <p class="card-title">Rajinder Sharma</p>
+                    <p class="card-title">{{reportTo}}</p>
                 </div>
             </div>
         </div>
@@ -148,7 +148,7 @@
                 <h5 class="card-header">Job Report To</h5>
                 <div class="card-body text-center">
                     <p class="card-title">Your Company Jobs Portal is at:</p>
-                    <a (click)="anviam()">Anviam.com</a>
+                    <a href="https://anviam.com/career" target="_blank">www.anviam.com/career</a>
                     <p>there are 3 new job opening are listed on the job portal</p>
                 </div>
             </div>
@@ -252,7 +252,7 @@
         </div>
         <div class="col-4 col-xl-6 col-12 mb-3 ">
             <div class="card overflowDesign" style="height: 100%;">
-                <h5 class="card-header">Angular Team</h5>
+                <h5 class="card-header">{{department}}</h5>
                 <div class="card-body">
                     <table class="table">
                         <thead>
@@ -265,7 +265,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr *ngFor="let items of dataDetailsUser">
+                            <tr *ngFor="let items of departmentEmployee">
                                 <th scope="row">{{items.id}}</th>
                                 <td>{{items.first_name}}</td>
                                 <td>{{items.employeeDetail.employee_status}}</td>
