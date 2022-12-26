@@ -14,6 +14,9 @@ import { DatePipe } from '@angular/common';
 import { OfficeTimeComponent } from './office-time/office-time.component';
 import { AuthGuard } from 'src/app/guard/auth.guard';
 import { ViewDetailsComponent } from './view-details/view-details.component';
+import { VideoChatComponent } from './video-chat/video-chat.component';
+import { FormsModule } from '@angular/forms';
+
 
 FullCalendarModule.registerPlugins([
   // register FullCalendar plugins
@@ -30,20 +33,22 @@ const routes: Routes = [
       { path: 'dashboard', canActivate:[AuthGuard], component: DashboardComponent },
       { path: 'profile', component: ProfileComponent },
       { path: 'time-count', component:OfficeTimeComponent},
-      { path: 'view-details/:id',component:ViewDetailsComponent}
+      { path: 'view-details/:id',component:ViewDetailsComponent},
+      {path: 'video-chat',component:VideoChatComponent}
     ],
   },
 ];
 
 @NgModule({
-  declarations: [AdminComponent, DashboardComponent, ProfileComponent, OfficeTimeComponent, ViewDetailsComponent],
+  declarations: [AdminComponent, DashboardComponent, ProfileComponent, OfficeTimeComponent, ViewDetailsComponent, VideoChatComponent],
   imports: [
     CommonModule,
     SharedModule,
     MaterialModule,
     RouterModule.forChild(routes),
     PageLayoutModule,
-    FullCalendarModule
+    FullCalendarModule,
+    FormsModule
   ],
   providers: [DatePipe],
 })

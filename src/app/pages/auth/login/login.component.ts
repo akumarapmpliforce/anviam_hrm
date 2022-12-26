@@ -27,6 +27,10 @@ export class LoginComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    const token = localStorage.getItem('token');
+    if(token){
+      this.router.navigate(['/admin/dashboard']);
+    }
     this.initForm();
   }
   initForm() {
@@ -86,4 +90,5 @@ export class LoginComponent implements OnInit {
       this.ngxService.stop();
     });
   }
+  
 }
