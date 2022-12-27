@@ -137,9 +137,13 @@
         <div class="col-6 col-xl-6 col-12 mb-3 ">
             <div class="card overflowDesign h-100">
                 <h5 class="card-header">You Report To</h5>
-                <div class="card-body d-flex designImage align-items-center">
-                    <img src="assets/icons/android-chrome-192x192.png" alt="">
-                    <p class="card-title">{{reportTo}}</p>
+                <div class="card-body d-flex align-items-center designImage ">
+                    <img src="./assets/logo/blank-profile-picture.webp" alt="" class="rounded-circle">
+                    <div class="card-title ">
+                        <h5>{{reportTo?.name }}</h5>
+                        <p class="p-6 mb-1">{{ reportTo?.position}}</p>
+                        <p class="p-6">{{reportTo?.department }}</p>
+                    </div>
                 </div>
             </div>
         </div>

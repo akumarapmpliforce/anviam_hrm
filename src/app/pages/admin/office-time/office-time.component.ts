@@ -42,7 +42,7 @@ export class OfficeTimeComponent implements OnInit {
   timeDetails() {
     this.commonApiService.userTime().subscribe((res: any) => {
       const userDetails: any = localStorage.getItem('hrm-user');
-      if (JSON.parse(userDetails).role === 'Hr-department') {
+      if (JSON.parse(userDetails).role === 'super_admin') {
         this.timeCount = res;
         for (let i = 0; i < this.timeCount.length; i++) {
           this.data = this.getDataDiff(
