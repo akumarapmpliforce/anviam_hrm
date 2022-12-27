@@ -30,7 +30,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
   age: any;
   role: any;
   departmentEmployee: any[] = [];
-  reportTo!: string;
+  reportTo!: any;
 
   @ViewChild('calendar')
   calendarComponent!: FullCalendarComponent;
@@ -79,7 +79,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
     this.commonSer.dataDetails().subscribe((res: any) => {
       const info: any = localStorage.getItem('hrm-user');
       const userInfo = JSON.parse(info);
-      if (userInfo.role === 'Hr-department') {
+      if (userInfo.role === 'super_admin') {
         this.dataDetailsUser = res;
       } else if (userInfo.role === 'Team-leader') {
         this.dataDetailsUser = res.filter(

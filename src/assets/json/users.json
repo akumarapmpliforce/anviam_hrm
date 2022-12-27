@@ -6,11 +6,15 @@
     "email": "nansari@anviam.com",
     "pImage": "./assets/logo/1.jpg",
     "password": 123456789,
-    "role": "Hr-department",
+    "role": "super_admin",
     "employeeDetail": {
       "position": "Junior Software Developer",
       "department": "Angular Department",
-      "team_leader": "Rajinder Sharma",
+      "team_leader": {
+        "name": "Rajinder Sharma",
+        "department": "Angular Department",
+        "position": "Lead Solutions Architect"
+      },
       "gender": "Male",
       "date_of_birth": "02-10-1998",
       "employee_status": "Full Time",
@@ -35,7 +39,11 @@
     "employeeDetail": {
       "position": "Junior Angular Developer",
       "department": "Angular Department",
-      "team_leader": "Rajinder Sharma",
+      "team_leader": {
+        "name": "Rajinder Sharma",
+        "department": "Angular Department",
+        "position": "Lead Solutions Architect"
+      },
       "gender": "Male",
       "date_of_birth": "02-10-1998",
       "employee_status": "Full Time",
@@ -52,7 +60,7 @@
   {
     "id": 3,
     "first_name": "Shivam",
-    "last_name": "Ansari",
+    "last_name": "Kumar",
     "email": "admin@admin.in",
     "pImage": "./assets/logo/3.jpg",
     "password": 123456789,
@@ -60,7 +68,11 @@
     "employeeDetail": {
       "position": "Junior Angular Developer",
       "department": "Node Js",
-      "team_leader": "Rajinder Sharma",
+      "team_leader": {
+        "name": "Rajinder Sharma",
+        "department": "Angular Department",
+        "position": "Lead Solutions Architect"
+      },
       "gender": "Male",
       "date_of_birth": "02-10-1998",
       "employee_status": "Full Time",
@@ -80,11 +92,15 @@
     "last_name": "Dhiman",
     "email": "shubham.dhiman@anviam.com",
     "password": 123456789,
-    "role": "Hr-department",
+    "role": "super_admin",
     "employeeDetail": {
       "position": "Junior Angular Developer",
       "department": "Angular Department",
-      "team_leader": "Rajinder Sharma",
+      "team_leader": {
+        "name": "Rajinder Sharma",
+        "department": "Angular Department",
+        "position": "Lead Solutions Architect"
+      },
       "gender": "Male",
       "date_of_birth": "02-10-2000",
       "employee_status": "Full Time",
@@ -109,7 +125,11 @@
     "employeeDetail": {
       "position": "Junior Angular Developer",
       "department": "Angular Department",
-      "team_leader": "Rajinder Sharma",
+      "team_leader": {
+        "name": "Rajinder Sharma",
+        "department": "Angular Department",
+        "position": "Lead Solutions Architect"
+      },
       "gender": "Male",
       "date_of_birth": "02-10-1998",
       "employee_status": "Full Time",
@@ -132,9 +152,13 @@
     "password": 123456789,
     "role": "Employee",
     "employeeDetail": {
-      "position": "Junior Ror Developer",
+      "position": "Junior ROR Developer",
       "department": "Ror Department",
-      "team_leader": "Rajinder Sharma",
+      "team_leader": {
+        "name": "Shabaj Ali",
+        "department": "ROR Department",
+        "position": "Sr. Software Engineer"
+      },
       "gender": "Male",
       "date_of_birth": "02-10-1998",
       "employee_status": "Full Time",
